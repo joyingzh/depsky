@@ -1,0 +1,9 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+This components implements the [http://en.wikipedia.org/wiki/Reed–Solomon_error_correction Reed-Solomon] codes in Java for application in storage.
+
+= Details =
+
+The code on this component is mainly based on the [http://web.eecs.utk.edu/~plank/plank/papers/CS-08-627.html Jerasure] implementation.
