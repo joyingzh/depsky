@@ -23,9 +23,9 @@ Now all the setup is finished and DepSky is ready to be used.
 
 
 
-*Testing DepSky*
+==*Testing DepSky*==
 
-To test DepSky we provide a simple main that can be found in src.depskys.core.LocalDepSkySClient. To run this main use the DepSky_Run.sh scritp at the root of the project providing 3 arguments:
+To test DepSky we provide a simple main that can be found in {{{src.depskys.core.LocalDepSkySClient}}}. To run this main use the DepSky_Run.sh scritp at the root of the project providing 3 arguments:
 
  * The first one is the client id.
  * The second argument indicates what protocol will be used to replicate the data. There are 4 possibilities:
