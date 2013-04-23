@@ -115,7 +115,7 @@ public LocalDepSkySClient(int clientId, boolean useModel){
 	}
 }}}
 
-The second step its create too many {{{src.depskys.core.DepSkySDataUnit}}} as you want. Each object of this type represents a container and contain information like the protocol used to replicate the data, metadata information, etc. To create a {{{DepSkySDataUnit}}} object just need to pass the container name you want, as you can see in the contructor below. If you create a {{{DepSkySDataUnit}}} with a name that already exist, it will point to the one that already exist.
+The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} as you want. Each object of this type represents a container and contain information like the protocol used to replicate the data, metadata information, etc. To create a {{{DepSkySDataUnit}}} object just need to pass the container name you want, as you can see in the contructor below. If you create a {{{DepSkySDataUnit}}} with a name that already exist, it will point to the one that already exist.
 
 {{{
   public DepSkySDataUnit(String regId) {
