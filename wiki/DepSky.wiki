@@ -1,10 +1,18 @@
-How run DepSky and how its work.
+*Getting Stared with DepSky*
 
-= Introduction =
+First of all, go to the download page and get the latest stable version available. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
-Test!
+Done this, you need to fill up the accounts.properties file (you can find it inside the config folder). To 
+fill up this file you need first create accounts in the cloud providers we support. To do that follow the links bellow:
 
-= Details =
+* Amazon S3 - https://www.amazon.com/ap/signin?openid.assoc_handle=aws&openid.return_to=https%3A%2F%2Fportal.aws.amazon.com%2Fgp%2Faws%2Fdeveloper%2Fregistration%2Findex.html&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&action=&disableCorpSignUp=&clientContext=&marketPlaceId=&poolName=&authCookies=&pageId=aws.ssop&siteState=&accountStatusPolicy=&sso=&openid.pape.preferred_auth_policies=MultifactorPhysical&openid.pape.max_auth_age=3600&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&server=%2Fap%2Fsignin%3Fie%3DUTF8&accountPoolAlias=
+   
+
+
+
+
+
+
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
