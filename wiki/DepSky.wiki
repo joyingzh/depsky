@@ -1,4 +1,4 @@
-*Getting Started with DepSky*
+==*Getting Started with DepSky*==
 
 First of all, go to the download page and get the latest stable version available. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
