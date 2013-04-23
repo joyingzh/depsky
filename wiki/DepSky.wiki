@@ -15,8 +15,7 @@ Done this, you need to fill up the accounts.properties file (you can find it ins
 
 After create the accounts you have access to yours API keys and so, you can fill up the accounts.properties file. To help you to find your keys, follow the steps bellow.
 
- * To find Amazon s3 keys go to the AWS Management Console, click in S3 service, now, in the upper right corner click in your account name and go to the Security Credentials. After that, in the separator Access
-Keys you can find your access key, and your secret key.
+ * To find Amazon s3 keys go to the AWS Management Console, click in S3 service, now, in the upper right corner click in your account name and go to the Security Credentials. After that, in the Access Keys separator you can find your access key, and your secret key.
 
  * To find Google Storage keys go to the Google API Console, and then go to the Google Cloud Storage separator. Now choose Interoperable Access and there you can find your keys. Don't forget first enable Google Cloud Storage in the services separator.
 
