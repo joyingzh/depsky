@@ -19,7 +19,7 @@ Keys you can find your access key, and your secret key.
 
  * To find RackSpace keys, go to the Control Panel. In the upper right corner you can find how to get your secret key. The access key is just your login username.
 
- * To find Windows Azure keys go to the windows azure portal, and after create a new storage project, you can find yours keys.
+ * To find Windows Azure keys go to the windows azure porta.First you need to create a new storage project. Atfer select this new project, at the botton of the page, you can find the key management. In this case your access key is your storage project name and you secret key is the primary key in the key manegement.
 
    
 
