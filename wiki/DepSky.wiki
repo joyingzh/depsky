@@ -50,9 +50,11 @@ This main allow you to read, write and delete. You have five commands available:
  * write 'data' - will write a new version with the content 'data' over the container selected.
  * read - will read the last version written to the container selected
  * delete - will delete all the data (data and metadata files) associated with the container selected.
- * read_m 'num' - will read old versions over the container selected. If 'num' = 0, will read the last version written, if 'num' = 1, will read the penultimate version written, ect 
+ * read_m 'num' - will read old versions over the container selected. If 'num' = 0, will read the last version written, if 'num' = 1, will read the penultimate version written, ect...
 
+ 
 
+==*Using DepSky as a Library*==
 
 
    
