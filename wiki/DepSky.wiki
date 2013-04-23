@@ -52,10 +52,12 @@ This main allow you to read, write and delete. You have five commands available:
  * delete - will delete all the data (data and metadata files) associated with the container selected.
  * read_m 'num' - will read old versions over the container selected. If 'num' = 0, will read the last version written, if 'num' = 1, will read the penultimate version written, etc...
 
-Note that read_m command
 
 ==*Using DepSky as a Library*==
 
+To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object. As you can see bellow, the constructor
+
+{{{public LocalDepSkySClient(int clientId, boolean useModel)}}}
 
    
 
