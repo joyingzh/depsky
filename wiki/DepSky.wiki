@@ -128,7 +128,7 @@ The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} as you
     }
 }}}
 
-When you want to do some operation in the {{{LocalDepSkySClient}}} (read, write, etc) you have to use a {{{DepSkySDataUnit}}} object.
+When you want to do some operation in the {{{LocalDepSkySClient}}} object (read, write, etc) you have to use a {{{DepSkySDataUnit}}} object.
 
 ==*Write*==
 
