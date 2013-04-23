@@ -42,7 +42,14 @@ To test DepSky we provide a simple main that can be found in src.depskys.core.Lo
 
     -> 0 if you want to use cloud storage to replicate the data.
 
-    -> 1 if you want to store all the data locally (testing purposes). If you want to use the local storage you need first run the server that can be found in src.depskys.clouds.drivers.localStorageService.ServerThread. to run this server you can use the Run_LocalStorage.sh script at the root fo the project. This server will receive all requests at ip 127.0.0.1 and port 5555.
+    -> 1 if you want to store all the data locally (testing purposes). If you want to use the local storage you need first run the server that can be found in src.depskys.clouds.drivers.localStorageService.ServerThread. To run this server you can use the Run_LocalStorage.sh script at the root fo the project. This server will receive all requests at ip 127.0.0.1 and port 5555.
+
+This main allow you to read, write and delete. You have five commands available:
+
+ * pick_du 'name' - will change the container that you are using to read and write.
+ * write 'data' - will write a new version with the content 'data' over the container selected
+ * read
+
 
 
 
