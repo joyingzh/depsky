@@ -44,13 +44,19 @@ To test DepSky we provide a simple main that can be found in {{{src.depskys.core
 
     -> 1 if you want to store all the data locally (testing purposes). If you want to use the local storage you need first run the server that can be found in {{{src.depskys.clouds.drivers.localStorageService.ServerThread}}}. To run this server you can use the Run_LocalStorage.sh script at the root fo the project. This server will receive all requests at ip 127.0.0.1 and port 5555.
 
+Let´s do an example to exemplify. If we run DepSky with the command bellow, we gonna start a session with the client id 0, all the data will be replicated using erasure codes and secret sharing and will be stored on the cloud providers.
+
+{{{
+$ ./DepSky_Run 0 1 0
+}}}
+
 This main allow you to read, write and delete. You have five commands available:
 
  * {{{pick_du 'name'}}} - will change the container that you are using to read and write.
  * {{{write 'data'}}} - will write a new version with the content 'data' over the container selected.
  * {{{read}}} - will read the last version written to the container selected
  * {{{delete}}} - will delete all the data (data and metadata files) associated with the container selected.
- * {{{read_m 'num'}}} - will read old versions over the container selected. If 'num' = 0, will read the last version written, if 'num' = 1, will read the penultimate version written, etc...
+ * {{{read_m 'num'}}} - will read old versions over the container selected. If 'num' = 0, will read the last version written, if 'num' = 1, will read the penultimate version written, etc.
 
 
 ==*Using DepSky as a Library*==
@@ -109,10 +115,28 @@ public LocalDepSkySClient(int clientId, boolean useModel){
 	}
 }}}
 
-   
+The second step its create too many {{{src.depskys.core.DepSkySDataUnit}}} as you want. Each object of this type represents a container and contain information like the protocol used to replicate the data, metadata information, etc. To create a {{{DepSkySDataUnit}}} object just need to pass the container name you want, as you can see in the contructor below. If you create a {{{DepSkySDataUnit}}} with a name that already exist, it will point to the one that already exist.
 
+{{{
+  public DepSkySDataUnit(String regId) {
+        this.regId = regId;
+        this.lastVersionNumber = -1;
+        this.idsCache = new HashMap<String, String>();
+        this.cloudVersions = new HashMap<String, Long>();
+        this.previousMetadata = new HashMap<String, String>();
+        this.isPVSS = this.isErsCodes = this.isSecSharing = false;
+    }
+}}}
 
+When you want to do some operation in the {{{LocalDepSkySClient}}} (read, write, etc) you have to use a {{{DepSkySDataUnit}}} object.
 
+==*Write*==
+
+==*Read*==
+
+==*Read Matching*==
+
+==*Delete*==
 
 
 
