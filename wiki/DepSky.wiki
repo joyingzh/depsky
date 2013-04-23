@@ -6,8 +6,11 @@ Done this, you need to fill up the accounts.properties file (you can find it ins
 
 
 * Amazon S3 - http://aws.amazon.com/pt/s3/
+
 * Google Storage - https://developers.google.com/storage/
+
 * RackSpace - http://www.rackspace.co.uk/
+
 * Windows Azure - https://www.windowsazure.com/en-us/
 
 After create the accounts you have access to yours API keys and so, you can fill up the accounts.properties file. To help you to find your keys, follow the steps bellow.
