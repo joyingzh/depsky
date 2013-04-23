@@ -78,10 +78,10 @@ public LocalDepSkySClient(int clientId, boolean useModel){
 			try {
 				credentials = readCredentials();
 			} catch (FileNotFoundException e) {
-				System.out.println("O ficheiro de configuração não existe!");
+				System.out.println("accounts.properties file dosen't exist!");
 				e.printStackTrace();
 			} catch (ParseException e) {
-				System.out.println("O ficheiro de configuração está mal configurado!");		
+				System.out.println("accounts.properties misconfigured!");		
 				e.printStackTrace();
 			}
 			this.drivers = new IDepSkySDriver[4];
@@ -110,7 +110,7 @@ public LocalDepSkySClient(int clientId, boolean useModel){
 		this.decoder = new ReedSolDecoder(2, 2, 8);
 
 		if(!startDrivers()){
-			System.out.println("Erro na conexão");
+			System.out.println("Connection Error!");
 		}	
 	}
 }}}
