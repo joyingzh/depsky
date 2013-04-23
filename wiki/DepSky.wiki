@@ -22,9 +22,15 @@ After create the accounts you have access to yours API keys and so, you can fill
 Now all the setup is finished and DepSky is ready to be used.
 
 
+
 *Testing DepSky*
 
-----------------  ON GOING  ------------------
+To test DepSky we provide a simple main that can be found in src.depskys.core.LocalDepSkySClient. To run this main you need to provide 3 arguments:
+
+ * The first one is the client id;
+ * The second argument indicates what protocol will be used to replicate the data. There 4 possibilities:
+    -> 0 means that will be used DepSky-A (there is no erasure codes neither secret sharing).
+    -> 
 
    
 
