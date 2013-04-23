@@ -2,10 +2,25 @@
 
 First of all, go to the download page and get the latest stable version available. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
-Done this, you need to fill up the accounts.properties file (you can find it inside the config folder). To 
-fill up this file you need first create accounts in the cloud providers we support. To do that follow the links bellow:
+Done this, you need to fill up the accounts.properties file (you can find it inside the config folder). To fill up this file you need first create accounts in the cloud providers we support. To do that follow the links bellow:
 
-* Amazon S3 - 
+
+* Amazon S3 - http://aws.amazon.com/pt/s3/
+* Google Storage - https://developers.google.com/storage/
+* RackSpace - http://www.rackspace.co.uk/
+* Windows Azure - https://www.windowsazure.com/en-us/
+
+After create the accounts you have access to yours API keys and so, you can fill up the accounts.properties file. To help you to find your keys, follow the steps bellow.
+
+ * To find Amazon s3 keys go to the AWS Management Console, click in S3 service, now, in the upper right corner click in your account name and go to the Security Credentials. After that, in the separator Access
+Keys you can find your access key, and your secret key.
+
+ * To find Google Storage keys go to the Google API Console, and then go to the Google Cloud Storage separator. Now choose Interoperable Access and there you can find your keys. Don't forget first enable Google Cloud Storage in the services separator.
+
+ * To find RackSpace keys, go to the Control Panel. In the upper right corner you can find how to get your secret key. The access key is just your login username.
+
+ * To find Windows Azure keys go to the windows azure portal, and after create a new storage project, you can find yours keys.
+
    
 
 
