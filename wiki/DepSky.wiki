@@ -1,4 +1,4 @@
-==*Getting Started with DepSky*==
+=*Getting Started with DepSky*=
 
 First of all, go to the download page and get the latest stable version available. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
@@ -23,7 +23,7 @@ Now all the setup is finished and DepSky is ready to be used.
 
 
 
-==*Testing DepSky*==
+=*Testing DepSky*=
 
 To test DepSky we provide a simple main that can be found in {{{src.depskys.core.LocalDepSkySClient}}}. To run this main use the DepSky_Run.sh scritp at the root of the project providing 3 arguments:
 
@@ -58,7 +58,7 @@ This main allow you to read, write and delete. You have five commands available:
  * {{{delete}}} - will delete all the data (data and metadata files) associated with the container selected.
  * {{{read_m 'num'}}} - will read old versions over the container selected. If 'num' = 0, will read the last version written, if 'num' = 1, will read the penultimate version written, etc. Note that only is possible read old versions written in this session because this main maintain all the information in memory. To read all the old versions this main must be changed.
 
-==*Using DepSky as a Library*==
+=*Using DepSky as a Library*=
 
 To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object. As you can see bellow, the constructor receive the client id (for now use ids bellow 6 because we only have keys generated for ids until the 6) and a boolean. If the boolean value come false, will be used the *local storage*, if come true, will be used the *cloud storage*
 
@@ -138,15 +138,15 @@ dataUnit.setUsingSecSharing(true); //to use only secret sharing
 
 When you want to do some operation in the {{{LocalDepSkySClient}}} object (read, write, etc) you have to use a {{{DepSkySDataUnit}}} object.
 
-=*Write*=
+==*Write*==
 
 
 
-=*Read*=
+==*Read*==
 
-=*Read Matching*=
+==*Read Matching*==
 
-=*Delete*=
+==*Delete*==
 
 
 
