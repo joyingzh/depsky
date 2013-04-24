@@ -2,14 +2,14 @@
 
 First of all, go to the download page and get the latest stable version available. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
-Done this, you need to fill up the accounts.properties file (you can find it inside the config folder). To fill up this file you need first create accounts in the cloud providers we support. To do that follow the links bellow:
+Done this, you need to fill up the accounts.properties file (you can find it inside the config folder). To fill up this file you need first create accounts in the cloud providers we support. To do that follow the links below:
 
   * Amazon S3 - http://aws.amazon.com/pt/s3/
   * Google Storage - https://developers.google.com/storage/
   * RackSpace - http://www.rackspace.co.uk/
   * Windows Azure - https://www.windowsazure.com/en-us/
 
-After create the accounts you have access to yours API keys and so, you can fill up the accounts.properties file. To help you to find your keys, follow the steps bellow.
+After create the accounts you have access to yours API keys and so, you can fill up the accounts.properties file. To help you to find your keys, follow the steps below.
 
  * To find Amazon s3 keys go to the AWS Management Console, click in S3 service, now, in the upper right corner click in your account name and go to the Security Credentials. After that, in the Access Keys separator you can find your access key, and your secret key.
 
@@ -27,7 +27,7 @@ Now all the setup is finished and DepSky is ready to be used.
 
 To test DepSky we provide a simple main that can be found in {{{src.depskys.core.LocalDepSkySClient}}}. To run this main use the DepSky_Run.sh scritp at the root of the project providing 3 arguments:
 
- * The first one is the client id (for now use ids bellow 6 because we only have keys generated for ids until the 6).
+ * The first one is the client id (for now use ids below 6 because we only have keys generated for ids until the 6).
  * The second argument indicates what protocol will be used to replicate the data. There are 4 possibilities:
 
     -> 0 means that will be used DepSky-A (there is no erasure codes neither secret sharing).
@@ -44,7 +44,7 @@ To test DepSky we provide a simple main that can be found in {{{src.depskys.core
 
     -> 1 if you want to store all the data locally (testing purposes). If you want to use the local storage you need first run the server that can be found in {{{src.depskys.clouds.drivers.localStorageService.ServerThread}}}. To run this server you can use the Run_LocalStorage.sh script at the root fo the project. This server will receive all requests at ip 127.0.0.1 and port 5555.
 
-Let´s do an example to exemplify. If we run DepSky with the command bellow, we gonna start a session with the client id 0, all the data will be replicated using erasure codes and secret sharing and will be stored on the cloud providers.
+Let´s do an example to exemplify. If we run DepSky with the command below, we gonna start a session with the client id 0, all the data will be replicated using erasure codes and secret sharing and will be stored on the cloud providers.
 
 {{{
 $ ./DepSky_Run 0 1 0
@@ -60,7 +60,7 @@ This main allow you to read, write and delete. You have five commands available:
 
 =*Using DepSky as a Library*=
 
-To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object. As you can see bellow, the constructor receive the client id (for now use ids bellow 6 because we only have keys generated for ids until the 6) and a boolean. If the boolean value come false, will be used the *local storage*, if come true, will be used the *cloud storage*
+To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object. As you can see below, the constructor receive the client id (for now use ids below 6 because we only have keys generated for ids until the 6) and a boolean. If the boolean value come false, will be used the *local storage*, if come true, will be used the *cloud storage*
 
 {{{
 public LocalDepSkySClient(int clientId, boolean useModel){
@@ -127,7 +127,7 @@ The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} as you
     }
 }}}
 
-After creating a DepSkySDataUnit object, you need to specify what protocol will be used to replicate the data that will be written in this container. By default, each DepSkySDataUnit object will use DepSky-A (data is replicated in _clear text_). To use one of the others three protocols follow the code bellow.
+After creating a {{{DepSkySDataUnit}}}object, you need to specify what protocol will be used to replicate the data that will be written in this container. By default, each {{{DepSkySDataUnit}}}object will use DepSky-A (data is replicated in _clear text_). To use one of the others three protocols follow the code below.
 
 {{{
 DepSkySDataUnit dataUnit = new DepSkySDataUnit("container");
@@ -140,6 +140,13 @@ When you want to do some operation in the {{{LocalDepSkySClient}}} object (read,
 
 ==*Write*==
 
+When you want to use the write operation, you have to pass the DepSkySDataUnit object for which you want to write and the data to be written. As we can see below, this operation return a {{{byte[]}}}. This {{{byte[]}}} is a SHA-1 hash of the written data. This hash must be saved by the client if he want to use the Read Matching operation (see bellow).
+
+{{{
+public synchronized byte[] write(DepSkySDataUnit reg, byte[] value) throws Exception {
+...
+}}}
+
 
 
 ==*Read*==
@@ -149,9 +156,3 @@ When you want to do some operation in the {{{LocalDepSkySClient}}} object (read,
 ==*Delete*==
 
 
-
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
