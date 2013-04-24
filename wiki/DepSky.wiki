@@ -1,5 +1,7 @@
 =*Getting Started with DepSky*=
 
+This section explain you how create the providers accounts. If you want test DepSky with out create the accounts, you can use local storage instead. Please read the next section called *Testing DepSky*.
+
 First of all, go to the download page and get the latest stable version available. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
 Done this, you need to fill up the accounts.properties file (you can find it inside the config folder). To fill up this file you need first create accounts in the cloud providers we support. To do that follow the links below:
