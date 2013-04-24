@@ -140,7 +140,7 @@ When you want to do some operation in the {{{LocalDepSkySClient}}} object (read,
 
 ==*Write*==
 
-When you want to use the write operation, you have to pass the DepSkySDataUnit object for which you want to write and the data to be written. As we can see below, this operation return a {{{byte[]}}}. This {{{byte[]}}} is a SHA-1 hash of the written data. This hash must be saved by the client if he want to use the Read Matching operation (see bellow).
+When you want to use the write operation, you have to pass the DepSkySDataUnit object for which you want to write and the data to be written. As we can see below, this operation return a {{{byte[]}}}. This {{{byte[]}}} is a SHA-1 hash of the written data. This hash must be saved by the client if he want to use the read matching operation (see bellow).
 
 {{{
 public synchronized byte[] write(DepSkySDataUnit reg, byte[] value) throws Exception {
@@ -148,11 +148,19 @@ public synchronized byte[] write(DepSkySDataUnit reg, byte[] value) throws Excep
 }}}
 
 
-
 ==*Read*==
+
+To use the this operation, you only have as argument the {{{DepSkySDataUnit}}} object. This operation will read the last version written to this {{{DepSkySDataUnit}}}.
+
+{{{
+public synchronized byte[] read(DepSkySDataUnit reg) throws Exception {
+...
+}}}
 
 ==*Read Matching*==
 
+{{{
+
+}}}
+
 ==*Delete*==
-
-
