@@ -140,7 +140,7 @@ When you want to do some operation in the {{{LocalDepSkySClient}}} object (read,
 
 ==*Write*==
 
-When you want to use the write operation, you have to pass the DepSkySDataUnit object for which you want to write and the data to be written. As we can see below, this operation return a {{{byte[]}}}. This {{{byte[]}}} is a SHA-1 hash of the written data. This hash must be saved by the client if he want to use the read matching operation (see bellow).
+When you want to use the write operation, you have to pass the DepSkySDataUnit object for which you want to write and the data to be written. As we can see below, this operation return a {{{byte []}}}. This {{{byte []}}} is a SHA-1 hash of the written data. This hash must be saved by the client if he want to use the read matching operation (see bellow).
 
 {{{
 public synchronized byte[] write(DepSkySDataUnit reg, byte[] value) throws Exception {
@@ -150,7 +150,7 @@ public synchronized byte[] write(DepSkySDataUnit reg, byte[] value) throws Excep
 
 ==*Read*==
 
-To use the this operation, you only have as argument the {{{DepSkySDataUnit}}} object. This operation will read the last version written to this {{{DepSkySDataUnit}}}.
+To use this operation, you only have as argument the {{{DepSkySDataUnit}}} object. This operation will read the last version written to this {{{DepSkySDataUnit}}}.
 
 {{{
 public synchronized byte[] read(DepSkySDataUnit reg) throws Exception {
@@ -159,8 +159,18 @@ public synchronized byte[] read(DepSkySDataUnit reg) throws Exception {
 
 ==*Read Matching*==
 
-{{{
+This operation have the function of read a old version of a given {{{DepSkySDataUnit}}}. To do that you have to pass a {{{byte []}}} containing the hash of the version you want to read. This hash is the one returned by the write operation.
 
+{{{
+public synchronized byte[] readMatching(DepSkySDataUnit reg, byte[] hashMatching) throws Exception{
+...
 }}}
 
 ==*Delete*==
+
+The delete operation will delete all the files associated with the given {{{DepSkySDataUnit}}}, that includes all the versions written and the metadata file.
+
+{{{
+public void deleteContainer(DepSkySDataUnit reg) throws Exception{
+...
+}}}
