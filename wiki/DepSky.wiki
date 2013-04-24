@@ -127,7 +127,7 @@ The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} as you
     }
 }}}
 
-After creating a DepSkySDataUnit object, you need to specify what protocol will be used to replicate the data that will be written in this container. By default, each DepSkySDataUnit object will use DepSky-A (clear data)
+After creating a DepSkySDataUnit object, you need to specify what protocol will be used to replicate the data that will be written in this container. By default, each DepSkySDataUnit object will use DepSky-A (data is replicated in _clear text_). To use one of the others three protocols follow the code bellow.
 
 {{{
 DepSkySDataUnit dataUnit = new DepSkySDataUnit("container");
@@ -138,13 +138,15 @@ dataUnit.setUsingSecSharing(true); //to use only secret sharing
 
 When you want to do some operation in the {{{LocalDepSkySClient}}} object (read, write, etc) you have to use a {{{DepSkySDataUnit}}} object.
 
-==*Write*==
+=*Write*=
 
-==*Read*==
 
-==*Read Matching*==
 
-==*Delete*==
+=*Read*=
+
+=*Read Matching*=
+
+=*Delete*=
 
 
 
