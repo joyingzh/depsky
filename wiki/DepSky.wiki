@@ -6,6 +6,6 @@ More specifically DepSky address four important limitations:
 
  * *Loss an corruption of data* - DepSky deals with this problem using Byzantine fault-tolerance replication to store data in a cloud-of-clouds, being possible get the data correctly even if some of the clouds corrupt or lose data.  
 
- * *Loss of privacy* -
+ * *Loss of privacy* - DepSky
 
  * *Vendor lock-in* -  
