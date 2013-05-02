@@ -22,4 +22,4 @@ More specifically DepSky address four important limitations:
 
 =*Costs*=
 
-For more information see the DepSky paper. You can find it here [http://www.di.fc.ul.pt/~bessani/publications/eurosys11-depsky.pdf EuroSys'11 paper]
+For more information see the DepSky paper. You can find it here [http://www.di.fc.ul.pt/~bessani/publications/eurosys11-depsky.pdf EuroSys'11 paper].
