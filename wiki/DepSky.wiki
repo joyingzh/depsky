@@ -21,7 +21,7 @@ More specifically DepSky address four important limitations:
 ==*DepSky-A*==
 
 ==*DepSky-CA*==
-[https://code.google.com/p/depsky/source/browse/images/coding_data.png]
+[https://code.google.com/p/depsky/source/browse/images/codingdata.png]
 
 ==*DepSky-only-JSS*==
 
