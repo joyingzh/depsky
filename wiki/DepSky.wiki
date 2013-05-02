@@ -15,3 +15,5 @@ More specifically DepSky address four important limitations:
 =*Data Model*=
 
 =*Protocols*=
+
+=*Costs*=
