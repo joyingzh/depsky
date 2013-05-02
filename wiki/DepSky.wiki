@@ -14,11 +14,18 @@ More specifically DepSky address four important limitations:
 
 =*Data Model*=
 
+
+
 =*Protocols*=
 
+==*DepSky-A*==
+
+==*DepSky-CA*==
 [https://code.google.com/p/depsky/source/browse/images/coding_data.png]
 
+==*DepSky-only-JSS*==
 
+==*DepSky-only-*==
 
 =*Costs*=
 
