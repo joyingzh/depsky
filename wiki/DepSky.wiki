@@ -16,7 +16,7 @@ More specifically DepSky address four important limitations:
 
 =*Protocols*=
 
-http://code.google.com/p/depsky/source/browse/images/coding_data.png
+[http://code.google.com/p/depsky/source/browse/images/coding_data.png]
 
 
 
