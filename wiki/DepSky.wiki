@@ -14,7 +14,7 @@ More specifically DepSky address four important limitations:
 
 =*Data Model*=
 
-
+DepSky provides a data model that hide the heterogeneity of using the differents clouds access interface. 
 
 =*Protocols*=
 
