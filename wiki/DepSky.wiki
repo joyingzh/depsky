@@ -10,5 +10,3 @@ More specifically DepSky address four important limitations:
 
  * *Vendor lock-in* - DepSky addresses this limitation because unlike use a single cloud provider, use a set of them. 
 
-
-coding_data.png
