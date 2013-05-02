@@ -16,7 +16,7 @@ More specifically DepSky address four important limitations:
 
 =*Protocols*=
 
-[images/coding_data.png]
+images/coding_data.png
 
 
 
