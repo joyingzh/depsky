@@ -22,4 +22,7 @@ More specifically DepSky address four important limitations:
 
 =*Costs*=
 
+As would be expected, a DepSky client would be required to pay four (using a cloud-of-clouds of four cloud providers) times more than he would pay if uses a single cloud. That not happens (if using DepSky-CA protocol)due to the erasure codes techniques. The erasure codes technique used () allow us to store in each of the four cloud providers only half of the orginal block data size. So, using DepSky, the client only will pay twice more than using a single cloud.
+
+
 For more information see the DepSky paper. You can find it here [http://www.di.fc.ul.pt/~bessani/publications/eurosys11-depsky.pdf EuroSys'11 paper].
