@@ -1,3 +1,5 @@
+=Introduction=
+
 DepSky is a system that improves the availability, confidentiality and integrity of stored data in the cloud. It reaches this goal by encrypting, enconding and replicating all the data on a set of differents clouds, forming a cloud-of-clouds.
 
 More specifically DepSky address four important limitations:
@@ -10,3 +12,6 @@ More specifically DepSky address four important limitations:
 
  * *Vendor lock-in* - DepSky addresses this limitation because unlike use a single cloud provider, use a set of them. 
 
+=Data Model=
+
+=Protocols=
