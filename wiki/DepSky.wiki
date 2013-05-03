@@ -12,10 +12,6 @@ More specifically DepSky address four important limitations:
 
  * *Vendor lock-in* - DepSky addresses this limitation because unlike use a single cloud provider, use a set of them. 
 
-=*Data Model*=
-
-DepSky provides a data model that hide the heterogeneity of using the differents clouds access interfaces. As storage object, our systems provides a object called DataUnit
-
 =*Protocols*=
 
 Below is a brief explanation of the DepSky protocols to store data in a cloud-of-clouds. All of them replicate the data for all clouds used but only is ensured that the data is properly stored in three (due to the Byzantines quoruns).
@@ -24,17 +20,17 @@ Below is a brief explanation of the DepSky protocols to store data in a cloud-of
 
 This protocol replicates all the data in clear text in each cloud.
 
-==*DepSky-CA*==
+===*DepSky-CA*===
 
-This protocol uses secret sharing and erasure code techniques to replicate the data in a cloud-of-clouds. The image below show how this is donne. First is generated an encryption key, and after that the original data block is encrypted. Then the encypted data block is erasure coded and are computed key shares of the encryption key. In this case we get four erasure coded blocks and four key shares because we use four clouds. Lastly is stored in each a different coded block togheter with a diffenret key share. 
+This protocol uses secret sharing and erasure code techniques to replicate the data in a cloud-of-clouds. The image below show how this is donne. First is generated an encryption key, and after that the original data block is encrypted. Then the encypted data block is erasure coded and are computed key shares of the encryption key. In this case we get four erasure coded blocks and four key shares because we use four clouds. Lastly is stored in each a different coded block together with a diffenret key share. 
 
 [https://code.google.com/p/depsky/source/browse/images/codingdata.png]
 
-==*DepSky-only-JSS*==
+===*DepSky-only-JSS*===
 
 This protocol only use secret sharing. Basically, is generated an encryption key and the data is encrypted. Then is generated four key shares of the key and is spread by each cloud the data encrypted together with a different key share.
 
-==*DepSky-only-JEC*==
+===*DepSky-only-JEC*===
 
 On the other hand, this protocol only use erasure codes to replicate the data. The data is erasure coded in four different blocks and then each of them is stored in a different provider.
 
