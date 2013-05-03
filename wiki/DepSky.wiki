@@ -28,7 +28,7 @@ This protocol uses secret sharing and erasure code techniques to replicate the d
 
 ===*DepSky-only-JSS*===
 
-This protocol only use secret sharing. Basically, is generated an encryption key and the data is encrypted. Then is generated four key shares of the key and is spread by each cloud the data encrypted together with a different key share.
+This protocol only use secret sharing. Basically, is generated an encryption key and the data is encrypted. Then is generated four key shares of the key. Finally are spread by each cloud the data encrypted together with a different key share.
 
 ===*DepSky-only-JEC*===
 
