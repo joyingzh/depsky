@@ -20,7 +20,7 @@ DepSky provides a data model that hide the heterogeneity of using the differents
 
 Below is a brief explanation of the DepSky protocols to store data in a cloud-of-clouds. All of them replicate the data for all clouds used but only is ensured that the data is properly stored in three (due to the Byzantines quoruns).
 
-==*DepSky-A*==
+===*DepSky-A*===
 
 This protocol replicates all the data in clear text in each cloud.
 
