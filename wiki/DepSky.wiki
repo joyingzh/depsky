@@ -22,7 +22,7 @@ This protocol replicates all the data in clear text in each cloud.
 
 ===*!DepSky-CA*===
 
-This protocol uses secret sharing and erasure code techniques to replicate the data in a cloud-of-clouds. The image below show how this is donne. First is generated an encryption key, and after that the original data block is encrypted. Then the encypted data block is erasure coded and are computed key shares of the encryption key. In this case we get four erasure coded blocks and four key shares because we use four clouds. Lastly is stored in each a different coded block together with a diffenret key share. 
+This protocol uses secret sharing and erasure code techniques to replicate the data in a cloud-of-clouds. The image below show how this is donne. First is generated an encryption key, and after that the original data block is encrypted. Then the encrypted data block is erasure coded and are computed key shares of the encryption key. In this case we get four erasure coded blocks and four key shares because we use four clouds. Lastly, is stored in each cloud a different coded block together with a diffenret key share. 
 
 http://depsky.googlecode.com/svn/images/codingdata.png
 
