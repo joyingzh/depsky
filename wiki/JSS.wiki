@@ -1,8 +1,8 @@
-#summary One-sentence summary of this page.
+
 
 = Introduction =
 
-
+JSS aims to provide a complete Java implementation for the Publicly Verifiable Secret Sharing Scheme proposed by [http://www.win.tue.nl/~berry/] in this [http://www.win.tue.nl/~berry/papers.html#crypto99]. 
 
 
 = Details =
