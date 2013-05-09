@@ -1,6 +1,6 @@
 =*Getting Started with DepSky*=
 
-This section explain you how create the providers accounts. If you want test DepSky without create the accounts, you can use local storage instead. Please read the next section called *Testing DepSky*.
+This section explain you how create the providers accounts. If you want test DepSky without create the accounts, you can use local storage instead. Please read the next section called *Testing !DepSky*.
 
 First of all, go to the download page and get the latest stable version available. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
@@ -21,20 +21,20 @@ After create the accounts you have access to yours API keys and so, you can fill
 
  * To find Windows Azure keys go to the windows azure portal. First you need to create a new storage project. Atfer select this new project, at the botton of the page, you can find the key management. In this case your access key is your storage project name and you secret key is the primary key in the key manegement.
 
-Now all the setup is finished and DepSky is ready to be used.
+Now all the setup is finished and !DepSky is ready to be used.
 
 
 
-=*Testing DepSky*=
+=*Testing !DepSky*=
 
 To test DepSky we provide a simple main that can be found in {{{src.depskys.core.LocalDepSkySClient}}}. To run this main use the DepSky_Run.sh scritp at the root of the project providing 3 arguments:
 
  * The first one is the client id (for now use ids below 6 because we only have keys generated for ids until the 6).
  * The second argument indicates what protocol will be used to replicate the data. There are 4 possibilities:
 
-    -> 0 means that will be used DepSky-A (there is no erasure codes neither secret sharing).
+    -> 0 means that will be used !DepSky-A (there is no erasure codes neither secret sharing).
 
-    -> 1 to use DepSky-CA (use erasure codes and secret sharing).
+    -> 1 to use !DepSky-CA (use erasure codes and secret sharing).
 
     -> 2 for use only erasure codes. 
 
@@ -60,7 +60,7 @@ This main allow you to read, write and delete. You have five commands available:
  * {{{delete}}} - will delete all the data (data and metadata files) associated with the container selected.
  * {{{read_m 'num'}}} - will read old versions over the container selected. If 'num' = 0, will read the last version written, if 'num' = 1, will read the penultimate version written, etc. Note that only is possible read old versions written in this session because this main maintain all the information in memory. To read all the old versions this main must be changed.
 
-=*Using DepSky as a Library*=
+=*Using !DepSky as a Library*=
 
 To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object. As you can see below, the constructor receive the client id (for now use ids below 6 because we only have keys generated for ids until the 6) and a boolean. If the boolean value come false, will be used the *local storage*, if come true, will be used the *cloud storage*.
 
@@ -129,7 +129,7 @@ The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} object
     }
 }}}
 
-After creating a {{{DepSkySDataUnit}}}object, you need to specify what protocol will be used to replicate the data that will be written in this container. By default, each {{{DepSkySDataUnit}}}object will use DepSky-A (data is replicated in _clear text_). To use one of the others three protocols follow the code below.
+After creating a {{{DepSkySDataUnit}}}object, you need to specify what protocol will be used to replicate the data that will be written in this container. By default, each {{{DepSkySDataUnit}} object will use !DepSky-A (data is replicated in clear_text). To use one of the others three protocols follow the code below.
 
 {{{
 DepSkySDataUnit dataUnit = new DepSkySDataUnit("container");
