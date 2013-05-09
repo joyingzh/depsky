@@ -1,4 +1,4 @@
-=*Getting Started with DepSky*=
+=*Getting Started with !DepSky*=
 
 This section explain you how create the providers accounts. If you want test DepSky without create the accounts, you can use local storage instead. Please read the next section called *Testing !DepSky*.
 
