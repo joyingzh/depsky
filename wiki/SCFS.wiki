@@ -4,6 +4,6 @@ SCFS is a cloud-backed file system that provides strong consistency even on top 
 
 =*Architecture*=  
 
-fwefefrewrgew
+The figure bellow presents the architecture of SCFS with its three main components
 
-http://depsky.googlecode.com/svn/images/scfs-3.pdf
+http://depsky.googlecode.com/svn/images/scfs-3.png
