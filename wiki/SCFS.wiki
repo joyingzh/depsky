@@ -2,9 +2,23 @@
 
 SCFS is a cloud-backed file system that provides strong consistency even on top of eventually-consistent cloud storage services. SCFS provides also a pluggable backend that allows it to work with a single cloud or with a cloud-of-clouds.
 
+It main concern is address some of the problems presented on the exiting cloud-backed file systems like S3FS, S3QL and BlueSky:
+
+* S3FS and S3QL does not support controlled file sharing among clients.
+* BlueSky' proxy is a single point of failure, once if it is down, no client can access to the data stored at the cloud side.
+* The three file systems use only one single cloud as backend.
+
+
+
 =*Architecture*=  
 
 The figure bellow presents the architecture of SCFS with its three main components: the backend cloud storage for maintaining the file data (shown as a cloud-of-clouds, but that can also be just a cloud); the coordination service for managing the metadata and to support synchronization; and the SCFS Agent that implements most of the SCFS functionality, and corresponds to the file system client mounted at the user machine.
 
 http://depsky.googlecode.com/svn/images/scfs-3.png
 
+===*SCFS Agent*===
+
+This is the component that implements the file systems calls. 
+
+
+=*Configuration Modes*=
