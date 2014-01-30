@@ -4,6 +4,7 @@ SCFS is a cloud-backed file system that provides strong consistency even on top 
 
 =*Architecture*=  
 
-The figure bellow presents the architecture of SCFS with its three main components
+The figure bellow presents the architecture of SCFS with its three main components: the backend cloud storage for maintaining the file data (shown as a cloud-of-clouds, but that can also be just a cloud); the coordination service for managing the metadata and to support synchronization; and the SCFS Agent that implements most of the SCFS functionality, and corresponds to the file system client mounted at the user machine.
 
 http://depsky.googlecode.com/svn/images/scfs-3.png
+
