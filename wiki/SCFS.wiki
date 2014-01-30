@@ -5,7 +5,7 @@ SCFS is a cloud-backed file system that provides strong consistency even on top 
 It main concern is address some of the problems presented on the exiting cloud-backed file systems like S3FS, S3QL and BlueSky:
 
  # S3FS and S3QL does not support controlled file sharing among clients.
- # BlueSky' proxy is a single point of failure, once if it is down, no client can access to the data stored at the cloud side.
+ # BlueSky proxy is a single point of failure, once if it is down, no client can access to the data stored at the cloud side.
  # The three file systems use only one single cloud as backend.
 
 
@@ -22,3 +22,5 @@ This is the component that implements the file systems calls.
 
 
 =*Configuration Modes*=
+
+SCFS is a very configurable file system, once the client can use it according with their needs.
