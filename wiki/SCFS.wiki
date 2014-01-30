@@ -21,6 +21,6 @@ http://depsky.googlecode.com/svn/images/scfs-3.png
 This is the component that implements the file systems calls. 
 
 
-=*Configuration Modes*=
+=*Operation Modes*=
 
 SCFS is a very configurable file system, once the client can use it according with their needs.
