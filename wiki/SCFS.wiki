@@ -22,4 +22,4 @@ The SCFS Agent component is the one that implements the most features of the fil
 
 =*Operation Modes*=
 
-SCFS is a very configurable file system, once the client can use it according with their needs.
+SCFS is a very configurable file system, once clients can use it according with their needs. 
