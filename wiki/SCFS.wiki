@@ -18,8 +18,13 @@ The figure shows the backend cloud storage as cloud-of-clouds formed by Amazon S
 
 The coordination services used by SCFS are DepSpace and ZooKepper. In the figure above they are installed in computing clouds, but they can be installed on any IaaS or in any server. To get more information about theses system please read the referred papers. DepSpace is described on a [http://www.di.fc.ul.pt/~bessani/publications/eurosys08-depspace.pdf EuroSys'08 paper] and ZooKepper on a [https://www.usenix.org/legacy/event/usenix10/tech/full_papers/Hunt.pdf Usenix'10 paper].
 
-The SCFS Agent component is the one that implements the most features of the file system. It makes a lot of usage of cache techniques to improve the system performance, to reduce the monetary costs and to increase the data availability. More Specifically it uses a temporary small memory cache to absorb some metadata update bursts, a memory cache to maintain data of open files, and a bigger disk cache to save all the most recents files used by the client. The last one uses all the free space in disk. After the disk is full it uses LRU policies to create new space.
+The SCFS Agent component is the one that implements the most features of the file system. It makes a lot of usage of cache techniques to improve the system performance, to reduce the monetary costs and to increase the data availability. More Specifically it uses a temporary small memory cache to absorb some metadata update bursts, a main memory cache to maintain data of open files, and a bigger disk cache to save all the most recents files used by the client. The last one uses all the free space in disk. After the disk is full it uses LRU policies to create new space.
 
 =*Operation Modes*=
 
-SCFS is a very configurable file system, once clients can use it according with their needs. 
+SCFS is a very configurable file system, once clients can use it according with their needs. Exist four main configurations that change both the file system behaviour as the provided guarantees:
+
+ # The system can be configured to use only one cloud or a cloud-of-clouds for both the backend cloud storage as to the coordination service.
+ # The client can choose if it uses the main memory cache to store open files data, or not.  
+ # The sending of data to the clouds can be synchronous or asynchronous.
+ # The system can be _sharing_ or _non-sharing_.
