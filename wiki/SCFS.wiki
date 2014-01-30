@@ -15,9 +15,6 @@ The figure bellow presents the architecture of SCFS with its three main componen
 
 http://depsky.googlecode.com/svn/images/scfs-3.png
 
-===*SCFS Agent*===
-
-This is the component that implements the file systems calls. 
 
 
 =*Operation Modes*=
