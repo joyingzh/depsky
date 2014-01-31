@@ -4,14 +4,18 @@ This page describe how you can configure, install and use the available version 
 
 The first step is go to the [https://code.google.com/p/depsky/wiki/Downloads downloads] page and get the latest version available of SCFS. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
-The next step is to configure all the necessary files. More specifically, you have to fill up configure files of DepSky, DepSpace and SCFS. 
+The next step is to configure all the necessary files. More specifically, it is necessary to fill configuration files for DepSky, DepSpace and SCFS. The following subsections explain do it.
 
 ===!DepSky===
- * !DepSky - 
 
- * DepSpace - 
 
- * SCFS - 
+
+===DepSpace===
+
+ff
+
+===SCFS===
+
 
 
 =*Deploying DepSpace*=
