@@ -1,8 +1,8 @@
 =*Getting Started with SCFS*=
 
-This page describe how you can configure, install and use the available version of SCFS. This prototype is not prepared to use ZooKepeer as coordination service; only Amazon S3 can be used as a backend of a single cloud storage; and the garbage collector is not implemented. Take a look at the [https://code.google.com/p/depsky/wiki/SCFS SCFS] wiki page before continuing reading this page. 
+This page describe how you can configure, install and use the available version of SCFS. This prototype is not prepared to use ZooKepeer as coordination service; only Amazon S3 can be used as a backend of a single cloud storage; and the garbage collector is not implemented. Take a look at the [SCFS] wiki page before continuing reading this page. 
 
-The first step is go to the [https://code.google.com/p/depsky/wiki/Downloads downloads] page and get the latest version available of SCFS. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
+The first step is go to the [Downloads] page and get the latest version available of SCFS. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
 The next step is to configure all the necessary files. More specifically, it is necessary to fill configuration files for DepSky, DepSpace and SCFS. The following subsections explain do it.
 
