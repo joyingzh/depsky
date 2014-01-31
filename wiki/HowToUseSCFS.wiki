@@ -8,11 +8,12 @@ The next step is to configure all the necessary files. More specifically, it is 
 
 ====!DepSky====
 
+To fill !Depsky configuration files please read the *'Getting Started with DepSky'* section in HowToUseDepSky page. Here you can learn how to create the clouds storage accounts
 
 
 ====DepSpace====
 
-ff
+
 
 ====SCFS====
 
