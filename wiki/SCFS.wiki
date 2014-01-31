@@ -22,7 +22,7 @@ The SCFS Agent component is the one that implements the most features of the fil
 
 =*Operation Modes*=
 
-SCFS is a very configurable file system, once clients can use it according with their needs. Exist four main configurations that change both the file system behaviour as the provided guarantees:
+SCFS is a very configurable file system, once clients can use it according with their needs. There is four main configurations that change both the file system behaviour as the provided guarantees:
 
  # The system can be configured to use only one cloud or a cloud-of-clouds for both the backend cloud storage as to the coordination service.
  # The client can choose if it uses the main memory cache to store open files data, or not.  
