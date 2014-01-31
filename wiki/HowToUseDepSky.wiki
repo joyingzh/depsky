@@ -21,6 +21,8 @@ After create the accounts you have access to yours API keys and so, you can fill
 
  * To find Windows Azure keys go to the windows azure portal. First you need to create a new storage project. Atfer select this new project, at the bottom of the page, you can find the key management. In this case your access key is your storage project name and you secret key is the primary key in the key management.
 
+If you only want to use Amazon S3 as your cloud storage provider, you can only create one account at Amazon S3 and use the example file provided (config/accounts_amazon.properties). To do that, copy the content of the 'accounts_amazon.properties' file to the one mentioned before (config/accounts.properties). In this case will be used four different Amazon S3 locations to store the data (US_Standard, EU_Ireland, US_West and AP_Tokyo).
+
 Now all the setup is finished and !DepSky is ready to be used.
 
 
