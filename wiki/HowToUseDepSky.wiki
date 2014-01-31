@@ -6,7 +6,7 @@ First of all, go to the download page and get the latest stable version availabl
 
 Done this, you need to fill up the accounts.properties file (you can find it inside the config folder). To fill up this file you need first create accounts in the cloud providers we support. To do that follow the links below:
 
-  * Amazon S3 - http://aws.amazon.com/pt/s3/
+  * Amazon S3 - http://aws.amazon.com/s3/
   * Google Storage - https://developers.google.com/storage/
   * RackSpace - http://www.rackspace.co.uk/
   * Windows Azure - https://www.windowsazure.com/en-us/
