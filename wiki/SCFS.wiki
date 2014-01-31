@@ -27,4 +27,4 @@ SCFS is a very configurable file system, once clients can use it according with 
  # The system can be configured to use only one cloud or a cloud-of-clouds for both the backend cloud storage as to the coordination service.
  # The client can choose if it uses the main memory cache to store open files data, or not.  
  # The sending of data to the clouds can be synchronous or asynchronous.
- # The system can be _sharing_ or _non-sharing_. If _non-sharing_ configuration is used the system does not uses none coordination service. Is considered that all files are private (not shared), therefore all the metadata can be stored in the clouds.
+ # The system can be _sharing_ or _non-sharing_. If _non-sharing_ configuration is used the system does not uses none coordination service. Is considered that all files are private (not shared), therefore all the metadata can be stored in the storage clouds.
