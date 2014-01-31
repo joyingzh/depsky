@@ -6,7 +6,7 @@ The first step is go to the [https://code.google.com/p/depsky/wiki/Downloads dow
 
 The next step is to configure all the necessary files. More specifically, it is necessary to fill configuration files for DepSky, DepSpace and SCFS. The following subsections explain do it.
 
-===!DepSky===
+====!DepSky====
 
 
 
