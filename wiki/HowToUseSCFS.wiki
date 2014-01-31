@@ -1,6 +1,6 @@
-=*Getting Started with !SCFS*=
+=*Getting Started with SCFS*=
 
-This page describe how you can configure, install and use SCFS. Take a look at the SCFS wiki page before continuing reading this page. The prototype
+This page describe how you can configure, install and use SCFS. Take a look at the [https://code.google.com/p/depsky/wiki/SCFS SCFS] wiki page before continuing reading this page. The prototype
 
 The first step is go to the Downloads page and get the latest version available of SCFS. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
