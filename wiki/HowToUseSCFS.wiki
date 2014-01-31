@@ -14,7 +14,7 @@ The next step is to configure all the necessary files. More specifically, it is 
 
 ff
 
-====[SCFS]====
+====SCFS====
 
 
 
