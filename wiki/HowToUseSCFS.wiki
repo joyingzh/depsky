@@ -6,14 +6,14 @@ The first step is go to the [Downloads] page and get the latest version availabl
 
 The next step is to configure all the necessary files. More specifically, it is necessary to fill configuration files for DepSky, DepSpace and SCFS. The following subsections explain how to do it.
 
-====!DepSky====
+===!DepSky===
 
 To fill !DepSky configuration files please read the *'Getting Started with !DepSky'* section in HowToUseDepSky page. Here you can learn how to create the clouds storage accounts and where can you get the necessary API keys.
 
 As you can see
 
 
-====DepSpace====
+===DepSpace===
 
 DepSpace configuration consists in two main steps; the address and port configuration of all DepSpace's replicas,  and the configuration of system parameters. 
 DepSpace is built on top of BFT-SMaRt. Please take a look at [http://code.google.com/p/bft-smart/wiki/Configuration How to configure BFT-SMaRt replicas]. Besides the parameters you need to set to BFT-SMaRt, there are others you need to configure to DepSpace. These parameters are described below:
@@ -29,14 +29,14 @@ DepSpace is built on top of BFT-SMaRt. Please take a look at [http://code.google
 
 We recommend you to use the default values set in the config/system.config file in the SCFS.zip file available in [Downloads].
 
-===== Public Keys =====
+==== Public Keys ====
 If you need to generate public/private keys for DepSpace replicas or clients, you can use the following command to generate files for public and private keys:
 
 ./rsaKeyPairGenerator.sh <id of the replica/client>
 
 Keys are stored in the config/keys folder. The command above creates key pairs both for clients and replicas. Currently such keys need to be manually distributed. 
 
-====SCFS====
+===SCFS===
 
 
 
