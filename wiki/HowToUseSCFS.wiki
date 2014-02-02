@@ -19,7 +19,7 @@ As you can see
 
 !DepSpace is built on top of [http://code.google.com/p/bft-smart/ BFT-SMaRt]. Please take a look at [http://code.google.com/p/bft-smart/wiki/Configuration How to configure BFT-SMaRt replicas].
 
-In hosts.config file you can set the address and port of all DepSpace replicas. The configuration file should look like this:
+In hosts.config file you can set the address and port of all !DepSpace replicas. The configuration file should look like this:
 
 {{{
 #server id, address and port (the ids from 0 to n-1 are the service replicas) 
@@ -43,7 +43,7 @@ After the configuration of the replicas address and port, you can set the parame
 || system.general.logging.mode || Set the logging mode. Set this parameter to 0 if you have set the logging use to false. The other modes are: 1="rw", 2="rws", (any other)="rwd" || Integer || 0 ||
 || system.general.batching || Use batches of messages. We recommend you to set this to false. || true or false || false ||
 || system.general.checkpoint_period || The period in which the system performs a checkpoint of its state. || Integer (number of operations) || 1000 ||
-|| system.general.replaceTrigger || The usage or not of the DepSpace's replace trigger layer. Note that SCFS needs this layer to correctly work. || true or false || true ||
+|| system.general.replaceTrigger || The usage or not of the !DepSpace's replace trigger layer. Note that SCFS needs this layer to correctly work. || true or false || true ||
 
 
 We recommend you to use the default values set in the config/system.config file in the SCFS.zip file available in [Downloads].
