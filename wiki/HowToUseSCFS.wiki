@@ -57,7 +57,7 @@ If you need to generate public/private keys for !DepSpace replicas or clients, y
 
 Keys are stored in the config/keys folder. The command above creates key pairs both for clients and replicas. Currently such keys need to be manually distributed. 
 
-===!SCFS===
+===SCFS===
 
 
 
