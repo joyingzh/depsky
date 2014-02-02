@@ -17,7 +17,7 @@ As you can see
 
 [http://www.navigators.di.fc.ul.pt/software/depspace/ DepSpace] configuration consists in two main steps; the address and port configuration of all !DepSpace's replicas, and the configuration of system parameters. This could be done in config/hosts.config and config/system.config files respectively. To comment out a configuration parameter in those files, the line must start with the character #.
 
-DepSpace is built on top of [http://code.google.com/p/bft-smart/ BFT-SMaRt]. Please take a look at [http://code.google.com/p/bft-smart/wiki/Configuration How to configure BFT-SMaRt replicas].
+!DepSpace is built on top of [http://code.google.com/p/bft-smart/ BFT-SMaRt]. Please take a look at [http://code.google.com/p/bft-smart/wiki/Configuration How to configure BFT-SMaRt replicas].
 
 In hosts.config file you can set the address and port of all DepSpace replicas. The configuration file should look like this:
 
