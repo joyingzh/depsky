@@ -20,8 +20,7 @@ DepSpace is built on top of BFT-SMaRt. Please take a look at [How to configure B
 
 || *Parameter* || *Description* || *Values* || *Default value* ||
 || system.general.rdRetryTime || The time the system blocks on rd operation waiting for a match tuple in the space. SCFS does not uses this operation. || Integer (miliseconds) || 10000 ||
-|| system.general.realTimeRenew || Use or not of renewable tuples. 
-Note that SCFS needs this parameter to be true. || true or false || true ||
+|| system.general.realTimeRenew || Use or not of renewable tuples. Note that SCFS needs this parameter to be true. || true or false || true ||
 || system.general.logging || Use or not of logging. Set this parameter to true if you want it. || true or false || false ||
 || system.general.logging.mode || Set the logging mode. Set this parameter to 0 if you have set the logging use to false. The other modes are: 1="rw", 2="rws", (any other)="rwd" || Integer || 0 ||
 || system.general.batching || Use batches of messages. We recommend you to set this to false. || true or false || false ||
