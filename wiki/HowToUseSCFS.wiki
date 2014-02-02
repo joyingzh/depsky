@@ -15,7 +15,7 @@ As you can see
 
 ====DepSpace====
 
-DepSpace configuration has two essential steps; the address and port configuration of all DepSpace's replicas,  and the configuration of system parameters. 
+DepSpace configuration consists in two main steps; the address and port configuration of all DepSpace's replicas,  and the configuration of system parameters. 
 DepSpace is built on top of BFT-SMaRt. Please take a look at [How to configure BFT-SMaRt replicas]. Besides the parameters you need to set to BFT-SMaRt, there are others you need to configure to DepSpace. These parameters are described below:
 
 || *Parameter* || *Description* || *Values* || *Default value* ||
@@ -27,6 +27,7 @@ DepSpace is built on top of BFT-SMaRt. Please take a look at [How to configure B
 || system.general.checkpoint_period || The period in which the system performs a checkpoint of its state. || Integer (number of operations) || 1000 ||
 || system.general.replaceTrigger || The usage or not of the DepSpace's replace trigger layer. Note that SCFS needs this layer to correctly work. || true or false || true ||
 
+We recommend to use the 
 ====SCFS====
 
 
