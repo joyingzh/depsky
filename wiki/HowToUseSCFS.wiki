@@ -27,7 +27,9 @@ DepSpace is built on top of BFT-SMaRt. Please take a look at [http://code.google
 || system.general.checkpoint_period || The period in which the system performs a checkpoint of its state. || Integer (number of operations) || 1000 ||
 || system.general.replaceTrigger || The usage or not of the DepSpace's replace trigger layer. Note that SCFS needs this layer to correctly work. || true or false || true ||
 
-We recommend to use the 
+We recommend you to use the default values set in the config/system.config file in the SCFS.zip file available in [Downloads].
+
+
 ====SCFS====
 
 
