@@ -15,7 +15,25 @@ As you can see
 
 ====DepSpace====
 
+DepSpace configuration has two essential steps; the address and port configuration of all DepSpace's replicas,  and the configuration of system parameters. 
+DepSpace is built on top of BFT-SMaRt. Please take a look at [How to configure BFT-SMaRt replicas]. Besides the parameters you need to set to BFT-SMaRt, there are others you need to configure to DepSpace. These parameters are described below:
 
+|| *Parameter* || *Description* || *Values* || *Default value* ||
+
+|| system.general.rdRetryTime || The time the system blocks on rd operation waiting for a match tuple in the space. SCFS does not uses this operation. || Integer (miliseconds) || 10000 ||
+
+|| system.general.realTimeRenew || Use or not of renewable tuples. 
+Note that SCFS needs this parameter to be true. || true or false || true ||
+
+|| system.general.logging || Use or not of logging. Set this parameter to true if you want it. || true or false || false ||
+
+|| system.general.logging.mode || Set the logging mode. Set this parameter to 0 if you have set the logging use to false. The other modes are: 1="rw", 2="rws", (any other)="rwd" || Integer || 0 ||
+
+|| system.general.batching || Use batches of messages. We recommend you to set this to false. || true or false || false || 
+
+|| system.general.checkpoint_period || The period in which the system performs a checkpoint of its state. || Integer (number of operations) || 1000 ||
+
+|| system.general.replaceTrigger || The usage or not of the DepSpace's replace trigger layer. Note that SCFS needs this layer to correctly work. || true or false || true ||
 
 ====SCFS====
 
