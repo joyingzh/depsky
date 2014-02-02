@@ -51,7 +51,7 @@ We recommend you to use the default values set in the config/system.config file 
 
 
 ==== Public Keys ====
-If you need to generate public/private keys for DepSpace replicas or clients, you can use the following command to generate files for public and private keys:
+If you need to generate public/private keys for !DepSpace replicas or clients, you can use the following command to generate files for public and private keys:
 
 ./rsaKeyPairGenerator.sh <id of the replica/client>
 
