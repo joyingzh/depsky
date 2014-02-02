@@ -8,6 +8,8 @@ It main concern is address some of the problems presented on the other existing 
  # Some, use a proxy to connect with the cloud storage, which is a single point of failure, once if it is down, no client can access to the data stored at the cloud side.
  # Almost all file systems use only one single cloud as backend.
 
+You can download SCFS for Linux distributions in [Downloads].
+
 =*Architecture*=  
 
 The figure bellow presents the architecture of SCFS with its three main components: the backend cloud storage for maintaining the file data; the coordination service for managing the metadata and to support synchronization; and the SCFS Agent that implements most of the SCFS functionality, and corresponds to the file system client mounted at the user machine.
