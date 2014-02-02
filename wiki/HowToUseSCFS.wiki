@@ -13,7 +13,7 @@ To fill !DepSky configuration files please read the *'Getting Started with !DepS
 As you can see
 
 
-===DepSpace===
+===!DepSpace===
 
 [http://www.navigators.di.fc.ul.pt/software/depspace/ DepSpace] configuration consists in two main steps; the address and port configuration of all DepSpace's replicas, and the configuration of system parameters. This could be done in config/hosts.config and config/system.config files respectively. To comment out a configuration parameter in those files, the line must start with the character #.
 
@@ -57,11 +57,11 @@ If you need to generate public/private keys for !DepSpace replicas or clients, y
 
 Keys are stored in the config/keys folder. The command above creates key pairs both for clients and replicas. Currently such keys need to be manually distributed. 
 
-===SCFS===
+===!SCFS===
 
 
 
-=*Deploying DepSpace*=
+=*Deploying !DepSpace*=
 
 =*Mounting SCFS*=
 
