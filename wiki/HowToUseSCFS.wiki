@@ -17,7 +17,25 @@ As you can see
 
 DepSpace configuration consists in two main steps; the address and port configuration of all DepSpace's replicas, and the configuration of system parameters. This could be done in config/hosts.config and config/system.config files respectively. To comment out a configuration parameter in those files, the line must start with the character #.
 
-DepSpace is built on top of BFT-SMaRt. Please take a look at [http://code.google.com/p/bft-smart/wiki/Configuration How to configure BFT-SMaRt replicas]. Besides the parameters you need to set to BFT-SMaRt, there are others you need to configure to DepSpace. These parameters are described below:
+DepSpace is built on top of BFT-SMaRt. Please take a look at [http://code.google.com/p/bft-smart/wiki/Configuration How to configure BFT-SMaRt replicas].
+
+In hosts.config file you can set the address and port of all DepSpace replicas. The configuration file should look like this:
+
+{{{
+#server id, address and port (the ids from 0 to n-1 are the service replicas) 
+0 127.0.0.1 11000
+1 127.0.0.1 11010
+2 127.0.0.1 11020
+3 127.0.0.1 11030
+4 127.0.0.1 11040
+5 127.0.0.1 11050
+6 127.0.0.1 11060
+7 127.0.0.1 11070
+}}}
+
+
+
+Besides the parameters you need to set to BFT-SMaRt, there are others you need to configure to DepSpace. These parameters are described below:
 
 || *Parameter* || *Description* || *Values* || *Default value* ||
 || system.general.rdRetryTime || The time the system blocks on rd operation waiting for a match tuple in the space. SCFS does not uses this operation. || Integer (miliseconds) || 10000 ||
