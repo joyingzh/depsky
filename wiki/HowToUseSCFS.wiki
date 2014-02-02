@@ -15,7 +15,7 @@ As you can see
 
 ===DepSpace===
 
-DepSpace configuration consists in two main steps; the address and port configuration of all DepSpace's replicas, and the configuration of system parameters. This could be done in config/hosts.config and config/system.config files respectively. To comment out a configuration parameter in those files, the line must start with the character #.
+[http://www.navigators.di.fc.ul.pt/software/depspace/ DepSpace] configuration consists in two main steps; the address and port configuration of all DepSpace's replicas, and the configuration of system parameters. This could be done in config/hosts.config and config/system.config files respectively. To comment out a configuration parameter in those files, the line must start with the character #.
 
 DepSpace is built on top of [http://code.google.com/p/bft-smart/ BFT-SMaRt]. Please take a look at [http://code.google.com/p/bft-smart/wiki/Configuration How to configure BFT-SMaRt replicas].
 
@@ -34,7 +34,7 @@ In hosts.config file you can set the address and port of all DepSpace replicas. 
 }}}
 
 
-After the configuration of the replicas address and port, you can set the parameter Besides the parameters you need to set to [http://code.google.com/p/bft-smart/ BFT-SMaRt], there are others you need to configure to DepSpace. These parameters are described below:
+After the configuration of the replicas address and port, you can set the parameter Besides the parameters you need to set to [http://code.google.com/p/bft-smart/ BFT-SMaRt], there are others you need to configure to [http://www.navigators.di.fc.ul.pt/software/depspace/ DepSpace]. These parameters are described below:
 
 || *Parameter* || *Description* || *Values* || *Default value* ||
 || system.general.rdRetryTime || The time the system blocks on rd operation waiting for a match tuple in the space. SCFS does not uses this operation. || Integer (miliseconds) || 10000 ||
