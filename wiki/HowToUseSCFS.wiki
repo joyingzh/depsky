@@ -15,7 +15,7 @@ As you can see
 
 ===DepSpace===
 
-DepSpace configuration consists in two main steps; the address and port configuration of all DepSpace's replicas,  and the configuration of system parameters. 
+DepSpace configuration consists in two main steps; the address and port configuration of all DepSpace's replicas, and the configuration of system parameters. This could be done in config/hosts.config and config/system.config files respectively. To comment out a configuration parameter in those files, the line must start with the character #.
 DepSpace is built on top of BFT-SMaRt. Please take a look at [http://code.google.com/p/bft-smart/wiki/Configuration How to configure BFT-SMaRt replicas]. Besides the parameters you need to set to BFT-SMaRt, there are others you need to configure to DepSpace. These parameters are described below:
 
 || *Parameter* || *Description* || *Values* || *Default value* ||
