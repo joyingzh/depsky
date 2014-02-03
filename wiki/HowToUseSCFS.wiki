@@ -82,6 +82,8 @@ Keys are stored in the config/keys folder. The command above creates key pairs b
 
 === *Using !DepSpace with just 1 replica* ===
 
+The default system.config and hosts.config file are set to use Byzantine Fault tolerant !DepSpace (using 3f+1 replicas).
+
 To use !DepSpace without any fault tolerance guarantee, some modification need to be done in the config/system.config file. In this way you need to set the following parameters of system.config file:
 
 {{{
