@@ -2,9 +2,24 @@
 
 This page describe how you can configure, install and use the available version of SCFS. This pre-alpha version does not support the use of Zookepeer as coordination service and only Amazon S3 can be used as a backend of a single cloud storage. Take a look at the [SCFS] wiki page before continuing reading this page. 
 
+===SCFS===
 The first step is go to the [Downloads] page and get the latest version available of SCFS. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
-The next step is to configure all the necessary files. More specifically, it is necessary to fill configuration files for DepSky, [http://www.navigators.di.fc.ul.pt/software/depspace/ DepSpace] and SCFS. The following subsections explain how to do it.
+Next, you need to link the system with the Fuse on your machine. To do that, you just need to run a script we provide in the project's root directory. If you have a x64 Java installed, you just need to run:
+⁄⁄
+{{{
+./configure_x64.sh
+}}}
+⁄⁄⁄⁄
+In the other hand, if your java is a x86 version, please run:
+
+{{{
+./configure_x86.sh
+}}}
+
+In the next step you just need to set your JAVA_HOME and FUSE_HOME in the build.conf file. Usually, your fuse home will be in /usr/local. The JAVA_HOME will depend on the version you installed.
+
+The next step is to configure the remain configuration files. More specifically, it is necessary to fill configuration files for DepSky and [http://www.navigators.di.fc.ul.pt/software/depspace/ DepSpace]. The following subsections explain how to do it.
 
 ===!DepSky===
 
@@ -45,23 +60,34 @@ After the configuration of the replicas address and port, you can set the parame
 || system.general.checkpoint_period || The period in which the system performs a checkpoint of its state. || Integer (number of operations) || 1000 ||
 || system.general.replaceTrigger || The usage or not of the !DepSpace's replace trigger layer. Note that SCFS needs this layer to correctly work. || true or false || true ||
 
-
 We recommend you to use the default values set in the config/system.config file in the SCFS.zip file available in [Downloads].
 
-
-
 ==== Public Keys ====
-If you need to generate public/private keys for !DepSpace replicas or clients, you can use the following command to generate files for public and private keys:
+We provide some default DepSpace keys. However, if you need to generate new public/private keys for !DepSpace replicas or clients, you can use the following command to generate files for public and private keys:
 
 ./rsaKeyPairGenerator.sh <id of the replica/client>
 
 Keys are stored in the config/keys folder. The command above creates key pairs both for clients and replicas. Currently such keys need to be manually distributed. 
 
-===SCFS===
-
-
-
 =*Deploying !DepSpace*=
+To deploy !DepSpace in a server (being it in the clouds or in other location), you first need to get the files to deploy. To generate the DepSpace files to deploy you just need to run the command below:
+
+{{{
+./generateDepSpaceToDeploy.sh
+}}}
+
+This script will generate a zip file (DepSpace.zip) with the configurations you did for the DepSpace locally (namely the hosts.config file). To deploy DepSpace in some sites, you just need to upload the DepSpace.zip these sites and unzip it:
+
+{{{
+unzip DepSpace.zip
+}}}
+
+After unzip the zip file, to run the DepSpace in each site, you just need to run the runDepSpace script in each site. You can find this script inside the folder DepSpace after you unzip the file. To execute this script you should run the follow command:
+
+{{{
+./runDepSpace.sh <replicaID>
+}}}
+
 
 =*Mounting SCFS*=
 
