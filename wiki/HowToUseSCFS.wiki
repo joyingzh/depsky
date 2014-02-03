@@ -6,7 +6,7 @@ This page describe how you can configure, install and use the available version 
 The first step is go to the [Downloads] page and get the latest version available of SCFS. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
 
 Next, you need to link the system with the Fuse on your machine. To do that, you just need to run a script we provide in the project's root directory. If you have a x64 Java installed, you just need to run:
-⁄⁄
+
 {{{
 ./configure_x64.sh
 }}}
