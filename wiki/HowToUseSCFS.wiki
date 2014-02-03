@@ -69,6 +69,10 @@ We provide some default !DepSpace keys. However, if you need to generate new pub
 
 Keys are stored in the config/keys folder. The command above creates key pairs both for clients and replicas. Currently such keys need to be manually distributed. 
 
+=== *Using !DepSpace with just 1 replica* ===
+
+To use !DepSpace without any fault tolerance guarantee, some modification need to be done in the config/system.config file. 
+
 =*Deploying !DepSpace*=
 To deploy !DepSpace in a server (being it in the clouds or in other location), you first need to get the files to deploy. To generate the !DepSpace files to deploy you just need to run the command below:
 
@@ -133,10 +137,6 @@ This operation mode is ideal to use the system with its highest performance, bac
 
 *Note:* Since all files are personal in this operation mode, it does not need the DepSpace deployment. So, if you want to try SCFS without experience the deployment effort of DepSpace, this is the perfect option to do that.   
 
-==*Cloud-of-Clouds SCFS*==
-
-To use SCFS 
-
-==*AWS SCFS*==
-
 =*Using SCFS*=
+
+To use SCFS you just need to enter in the `<mountPoint>` folder and 
