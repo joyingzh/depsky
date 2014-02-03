@@ -98,8 +98,9 @@ To mount SCFS you just need to run the following command in the root of the proj
 }}}
 
 The meaning of the two given arguments are:
-* _mountPoint_ - the folder where SCFS will be mounted;
-* _clientID_ - the identifier of the client (must be unique).
+# _mountPoint_ - the folder where SCFS will be mounted;
+
+# _clientID_ - the identifier of the client (must be unique).
 
 Each time you mount the system you are able to define how the system will behave, opting for several parameters. This parameters will have influence in the system guarantees and performance. Note that the default behavior of the system (the command presented before) provides the highest level of guarantees and the lower performance.
 
