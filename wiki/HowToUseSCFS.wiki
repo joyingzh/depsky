@@ -25,8 +25,17 @@ The next step is to configure the remain configuration files. More specifically,
 
 To fill !DepSky configuration files please read the *'Getting Started with !DepSky'* section in HowToUseDepSky page. Here you can learn how to create the clouds storage accounts and where can you get the necessary API keys.
 
-As you can see
+You can use also SCFS with only one cloud storage as backend. For now, we only support Amazon S3. To configure it you just need to delete the last three entries in the account.properties file (see HowToUseDepSky). Your file must be equal to the content below:
 
+{{{
+#AMAZON
+driver.type=AMAZON-S3
+driver.id=cloud1
+accessKey=********************
+secretKey=****************************************
+location=EU_Ireland
+canonicalId=*****
+}}}
 
 ===!DepSpace===
 
