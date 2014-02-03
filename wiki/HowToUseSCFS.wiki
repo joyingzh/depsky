@@ -93,7 +93,7 @@ After unzip the zip file, to run the !DepSpace in each site, you just need to ru
 
 || *Parameter* || *Description* || Default value ||
 || -optimizedCache || Use of main memory data cache. || off ||
-|| --sync-to-cloud || Posix operation FSYNC flush data to the clouds. If turned off, FSYNC flushes data to local disk. || off ||
+|| --sync-to-cloud || POSIX operation FSYNC flush data to the clouds. If turned off, FSYNC flushes data to local disk. || off ||
 || --non-blocking-cloud || Data are sent to the clouds asynchronously. If turned off, the file close operation will block when data are sent to the clouds. || off ||
 || --non-sharing || The system runs in non-sharing mode of operation. It means that clients are not able to share data between them || off ||
 || -printer || Turn on the debug mode. || off ||
