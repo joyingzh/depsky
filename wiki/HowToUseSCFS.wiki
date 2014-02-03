@@ -135,8 +135,28 @@ This operation mode is ideal to use the system with its highest performance, bac
 ./mountSCFS.sh <mountPoint> <clientID> --non-sharing --non-blocking-cloud
 }}}
 
-*Note:* Since all files are personal in this operation mode, it does not need the DepSpace deployment. So, if you want to try SCFS without experience the deployment effort of DepSpace, this is the perfect option to do that.   
+*Note:* Since all files are personal in this operation mode, it does not need the !DepSpace deployment. So, if you want to try SCFS without experience the deployment effort of !DepSpace, this is the perfect option to do that.   
 
 =*Using SCFS*=
 
-To use SCFS you just need to enter in the `<mountPoint>` folder and 
+To use SCFS you just need to enter in the `<mountPoint>` folder and operate in the same way you do in your local filesystem. For example, let your SCFS configuration be:
+
+{{{
+./mountSCFS.sh /scfs 4 --non-sharing --non-blocking-cloud -optimizedCache
+}}}
+
+In the example, your `<mountPoint>` will be _/scfs_. So, you just need to operate the file in that folder to take advantage of SCFS.
+
+=== *Share a file using SCFS* ===
+
+To share a file, you just need to use the _setfacl_ command, giving the clientId of the client with which you want to share a file, and the permissions to that client:
+
+{{{
+setfacl -m u:<friendClientID>:<permissions> <fileName>
+}}} 
+
+For example, assuming there is a file named _file1.txt_, to share this file with the client 5 giving full control over the file, you just need to run the following command:
+
+{{{
+setfacl -m u:5:rwx file1.txt
+}}} 
