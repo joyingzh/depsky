@@ -10,7 +10,7 @@ Next, you need to link the system with the Fuse on your machine. To do that, you
 {{{
 ./configure_x64.sh
 }}}
-⁄⁄⁄⁄
+
 In the other hand, if your java is a x86 version, please run:
 
 {{{
