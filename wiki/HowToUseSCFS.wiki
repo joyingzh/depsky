@@ -91,4 +91,11 @@ After unzip the zip file, to run the !DepSpace in each site, you just need to ru
 
 =*Mounting SCFS*=
 
+|| *Parameter* || *Description* || Default value ||
+|| -optimizedCache || Use of main memory data cache. || off ||
+|| --sync-to-cloud || Posix operation FSYNC flush data to the clouds. If turned off, FSYNC flushes data to local disk. || false ||
+|| --non-blocking-cloud || Data are sent to the clouds asynchronously. If turned off, the file close operation will block when data are sent to the clouds. || false ||
+|| --non-sharing || The system runs in non-sharing mode of operation. It means that clients are not able to share data between them || false ||
+|| -printer || Turn on the debug mode. || false ||
+
 =*Using SCFS*=
