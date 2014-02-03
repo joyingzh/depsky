@@ -63,7 +63,7 @@ After the configuration of the replicas address and port, you can set the parame
 We recommend you to use the default values set in the config/system.config file in the SCFS.zip file available in [Downloads].
 
 ==== Public Keys ====
-We provide some default DepSpace keys. However, if you need to generate new public/private keys for !DepSpace replicas or clients, you can use the following command to generate files for public and private keys:
+We provide some default !DepSpace keys. However, if you need to generate new public/private keys for !DepSpace replicas or clients, you can use the following command to generate files for public and private keys:
 
 ./rsaKeyPairGenerator.sh <id of the replica/client>
 
