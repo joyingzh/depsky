@@ -82,7 +82,25 @@ Keys are stored in the config/keys folder. The command above creates key pairs b
 
 === *Using !DepSpace with just 1 replica* ===
 
-To use !DepSpace without any fault tolerance guarantee, some modification need to be done in the config/system.config file. 
+To use !DepSpace without any fault tolerance guarantee, some modification need to be done in the config/system.config file. In this way you need to set the following parameters of system.config file:
+
+{{{
+#Number of servers in the group
+system.servers.num = 1
+
+#Maximum number of faulty replicas 
+system.servers.f = 0
+
+#Initial View 
+system.initial.view = 0
+}}}
+
+You also need to reconfigure the replicas address/port file. So, the config/hosts.config file should look like the following:
+
+{{{
+#server id, address and port (the ids from 0 to n-1 are the service replicas) 
+0 127.0.0.1 11000
+}}}
 
 =*Deploying !DepSpace*=
 To deploy !DepSpace in a server (being it in the clouds or in other location), you first need to get the files to deploy. To generate the !DepSpace files to deploy you just need to run the command below:
