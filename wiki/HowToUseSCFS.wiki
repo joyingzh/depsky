@@ -110,7 +110,7 @@ In the table bellow are shown all the flags that can be turned on:
 
 || *Parameter* || *Description* || Default value ||
 || -optimizedCache || Use of main memory data cache. || off ||
-|| --sync-to-cloud || POSIX operation FSYNC flush data to the clouds. If turned off, FSYNC flushes data to local disk. || off ||
+|| --sync-to-cloud || The FSYNC POSIX operation flushes the data to the clouds. If turned off, FSYNC flushes data to local disk. || off ||
 || --non-blocking-cloud || Data are sent to the clouds asynchronously. If turned off, the file close operation will block when data are sent to the clouds. || off ||
 || --non-sharing || The system runs in non-sharing mode of operation. It means that clients are not able to share data between them || off ||
 || -printer || Turn on the debug mode. || off ||
@@ -119,7 +119,23 @@ As you can understand, if the _--non-blocking-cloud_ flag is turned on, the perf
 
 ==*Non-Sharing SCFS*==
 
+To use this operation mode, you should turn on the _--non-sharing_ flag as shown bellow:
+
+{{{
+./mountSCFS.sh <mountPoint> <clientID> --non-sharing
+}}}
+
+This operation mode is ideal to use the system with its highest performance, backuping the file system data to the clouds. So, the use of _--non-blocking-cloud_ flag are recommended:
+
+{{{
+./mountSCFS.sh <mountPoint> <clientID> --non-sharing --non-blocking-cloud
+}}}
+
+*Note:* Since all files are personal in this operation mode, it does not need the DepSpace deployment. So, if you want to try SCFS without experience the deployment effort of DepSpace, this is the perfect option to do that.   
+
 ==*Cloud-of-Clouds SCFS*==
+
+To use SCFS 
 
 ==*AWS SCFS*==
 
