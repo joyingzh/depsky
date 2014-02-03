@@ -76,13 +76,13 @@ To deploy !DepSpace in a server (being it in the clouds or in other location), y
 ./generateDepSpaceToDeploy.sh
 }}}
 
-This script will generate a zip file (DepSpace.zip) with the configurations you did for the DepSpace locally (namely the hosts.config file). To deploy DepSpace in some sites, you just need to upload the DepSpace.zip these sites and unzip it:
+This script will generate a zip file (!DepSpace.zip) with the configurations you did for the !DepSpace locally (namely the hosts.config file). To deploy !DepSpace in some sites, you just need to upload the !DepSpace.zip these sites and unzip it:
 
 {{{
 unzip DepSpace.zip
 }}}
 
-After unzip the zip file, to run the DepSpace in each site, you just need to run the runDepSpace script in each site. You can find this script inside the folder DepSpace after you unzip the file. To execute this script you should run the follow command:
+After unzip the zip file, to run the !DepSpace in each site, you just need to run the runDepSpace script in each site. You can find this script inside the folder DepSpace after you unzip the file. To execute this script you should run the follow command:
 
 {{{
 ./runDepSpace.sh <replicaID>
