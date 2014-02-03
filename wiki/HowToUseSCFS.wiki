@@ -145,7 +145,7 @@ To use SCFS you just need to enter in the `<mountPoint>` folder and operate in t
 ./mountSCFS.sh /scfs 4 --non-sharing --non-blocking-cloud -optimizedCache
 }}}
 
-In the example, your `<mountPoint>` will be _/scfs_. So, you just need to operate the file in that folder to take advantage of SCFS.
+In the example, your `<mountPoint>` will be _/scfs_. So, you just need to operate over the files in that folder to take advantage of SCFS.
 
 === *Share a file using SCFS* ===
 
