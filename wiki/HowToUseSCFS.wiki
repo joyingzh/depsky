@@ -17,7 +17,7 @@ In the other hand, if your java is a x86 version, please run:
 ./configure_x86.sh
 }}}
 
-In the next step you just need to set your JAVA_HOME and FUSE_HOME in the build.conf file. Usually, your fuse home will be in /usr/local. The JAVA_HOME will depend on the version you installed.
+In the next step you just need to set your JAVA_HOME and FUSE_HOME in the build.conf file. Usually, your fuse home will be in /usr/local. The JAVA_HOME will depend on the java version you have installed on your machine.
 
 The next step is to configure the remain configuration files. More specifically, it is necessary to fill configuration files for DepSky and [http://www.navigators.di.fc.ul.pt/software/depspace/ DepSpace]. The following subsections explain how to do it.
 
