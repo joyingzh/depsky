@@ -70,7 +70,7 @@ We provide some default DepSpace keys. However, if you need to generate new publ
 Keys are stored in the config/keys folder. The command above creates key pairs both for clients and replicas. Currently such keys need to be manually distributed. 
 
 =*Deploying !DepSpace*=
-To deploy !DepSpace in a server (being it in the clouds or in other location), you first need to get the files to deploy. To generate the DepSpace files to deploy you just need to run the command below:
+To deploy !DepSpace in a server (being it in the clouds or in other location), you first need to get the files to deploy. To generate the !DepSpace files to deploy you just need to run the command below:
 
 {{{
 ./generateDepSpaceToDeploy.sh
@@ -82,7 +82,7 @@ This script will generate a zip file (!DepSpace.zip) with the configurations you
 unzip DepSpace.zip
 }}}
 
-After unzip the zip file, to run the !DepSpace in each site, you just need to run the runDepSpace script in each site. You can find this script inside the folder DepSpace after you unzip the file. To execute this script you should run the follow command:
+After unzip the zip file, to run the !DepSpace in each site, you just need to run the runDepSpace script in each site. You can find this script inside the folder !DepSpace after you unzip the file. To execute this script you should run the follow command:
 
 {{{
 ./runDepSpace.sh <replicaID>
