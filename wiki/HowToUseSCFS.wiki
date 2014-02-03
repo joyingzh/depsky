@@ -25,6 +25,8 @@ The next step is to configure the remain configuration files. More specifically,
 
 To fill !DepSky configuration files please read the *'Getting Started with !DepSky'* section in HowToUseDepSky page. Here you can learn how to create the clouds storage accounts and where can you get the necessary API keys.
 
+If you want to share files with other users, you have also to fill the _canonicalId_ field in each entry of the accounts.properties. For now, the system only allow to share files between different accounts if you use only Amazon S3. You can find your canonical Id in the Security Credentials page.
+
 You can use also SCFS with only one cloud storage as backend. For now, we only support Amazon S3. To configure it you just need to delete the last three entries in the account.properties file (see HowToUseDepSky). Your file must be equal to the content below:
 
 {{{
@@ -34,7 +36,7 @@ driver.id=cloud1
 accessKey=********************
 secretKey=****************************************
 location=EU_Ireland
-canonicalId=*****
+canonicalId=******************************************************
 }}}
 
 ===!DepSpace===
