@@ -8,7 +8,7 @@ It main concern is address some of the problems presented on the other existing 
  # Some, use a proxy to connect with the cloud storage, which is a single point of failure, once if it is down, no client can access to the data stored at the cloud side.
  # Almost all file systems use only one single cloud as backend.
 
-You can download SCFS for Linux distributions in [Downloads].
+You can download SCFS for Linux distributions in [Downloads]. To get some assistance in SCFS installation and configuration, please take a look at [HowToUseSCFS].
 
 =*Architecture*=  
 
