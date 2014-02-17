@@ -1,6 +1,6 @@
 =*Getting Started with SCFS*=
 
-This page describe how you can configure, install and use the available version of SCFS. The version we provide uses DepSpace as coordination service and Amazon S3 as single cloud storage backend. Take a look at the [SCFS] wiki page before continuing reading this page. 
+This page describe how you can configure, install and use the available version of SCFS. The version we provide uses !DepSpace as coordination service and Amazon S3 as single cloud storage backend. Take a look at the [SCFS] wiki page before continuing reading this page. 
 
 ===SCFS===
 The first step is go to the [Downloads] page and get the latest version available of SCFS. After the download is finished, you need to extract the archive downloaded. Make sure you have java 1.7 or later installed.
