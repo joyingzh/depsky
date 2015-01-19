@@ -1,8 +1,7 @@
 
-
 = Introduction =
 
-This components implements the [http://en.wikipedia.org/wiki/Reed–Solomon_error_correction Reed-Solomon] codes in Java for application in storage.
+This component implements the [http://en.wikipedia.org/wiki/Reed–Solomon_error_correction Reed-Solomon] codes in Java for application in storage.
 
 = Details =
 
