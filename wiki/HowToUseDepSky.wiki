@@ -62,6 +62,8 @@ This main allow you to read, write and delete. You have five commands available:
  * {{{delete}}} - will delete all the data (data and metadata files) associated with the container selected.
  * {{{read_m 'num'}}} - will read old versions over the container selected. If 'num' = 0, will read the last version written, if 'num' = 1, will read the penultimate version written, etc. Note that only is possible read old versions written in this session because this main maintain all the information in memory. To read all the old versions this main must be changed.
 
+This main is not enough to take advantage of all the functionalities provided by DepSky. To learn more about all you can do with DepSky read the section below.
+ 
 =*Using !DepSky as a Library*=
 
 To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object. As you can see below, the constructor receive the client id (for now use ids below 6 because we only have keys generated for ids until 6) and a boolean. If the boolean value is set to false, will be used the *local storage*, otherwise will be used the *cloud storage*.
