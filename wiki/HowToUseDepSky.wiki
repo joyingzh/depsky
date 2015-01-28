@@ -13,13 +13,13 @@ Done this, you need to fill up the accounts.properties file (you can find it ins
 
 After create the accounts you have access to yours API keys and so, you can fill up the accounts.properties file. To help you to find your keys, follow the steps below.
 
- * To find Amazon s3 keys go to the AWS Management Console, click in S3 service, now, in the upper right corner click in your account name and go to the Security Credentials. After that, in the Access Keys separator you can find your access key, and your secret key.
+ * To find Amazon s3 keys go to the AWS Management Console, click in S3 service, now, in the upper right corner click in your account name and go to the Security Credentials. After that, in the Access Keys separator you can generate your access and secret keys.
 
  * To find Google Storage keys go to the Google API Console, and then go to the Google Cloud Storage separator. Now choose Interoperable Access and there you can find your keys. Don't forget first enable Google Cloud Storage in the services separator.
 
  * To find RackSpace keys, go to the Control Panel. In the upper right corner you can find how to get your secret key. The access key is just your login username.
 
- * To find Windows Azure keys go to the windows azure portal. First you need to create a new storage project. Atfer select this new project, at the bottom of the page, you can find the key management. In this case your access key is your storage project name and you secret key is the primary key in the key management.
+ * To find Windows Azure keys go to the windows azure portal. First you need to create a new storage project. After select this new project, at the bottom of the page, you can find the key management. In this case your access key is your storage project name and you secret key is the primary key in the key management.
 
 If you only want to use Amazon S3 as your cloud storage provider, you can only create one account at Amazon S3 and use the example file provided (config/accounts_amazon.properties). To do that, copy the content of the 'accounts_amazon.properties' file to the one mentioned before (config/accounts.properties). In this case will be used four different Amazon S3 locations to store the data (US_Standard, EU_Ireland, US_West and AP_Tokyo).
 
@@ -69,9 +69,10 @@ This main is not enough to take advantage of all the functionalities provided by
 To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object. As you can see below, the constructor receive the client id (for now use ids below 6 because we only have keys generated for ids until 6) and a boolean. If the boolean value is set to false, will be used the *local storage*, otherwise will be used the *cloud storage*.
 
 {{{
-public LocalDepSkySClient(int clientId, boolean useModel){
+	public LocalDepSkySClient(int clientId, boolean useModel) throws StorageCloudException {
 
 		this.clientId = clientId;
+		DepSkySKeyLoader keyLoader = new DepSkySKeyLoader(null);
 		if(!useModel){
 			this.cloud1 = new LocalDiskDriver("cloud1");
 			this.cloud2 = new LocalDiskDriver("cloud2");
@@ -105,9 +106,8 @@ public LocalDepSkySClient(int clientId, boolean useModel){
 				}
 				drivers[i] = DriversFactory.getDriver(type, driverId, accessKey, secretKey);
 			}
-
 		}	
-		this.manager = new DepSkySManager(drivers, this);
+		this.manager = new DepSkySManager(drivers, this, keyLoader);
 		this.replies = new HashMap<Integer, CloudRepliesControlSet>();
 		this.N = drivers.length;
 		this.F = 1;
@@ -116,11 +116,11 @@ public LocalDepSkySClient(int clientId, boolean useModel){
 
 		if(!startDrivers()){
 			System.out.println("Connection Error!");
-		}	
+		}
 	}
 }}}
 
-The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} objects as you want. Each object of this type represents a container and contain information like the protocol used to replicate the data, metadata information, etc. To create a {{{DepSkySDataUnit}}} object just need to pass the container name you want, as you can see in the contructor below. If you create a {{{DepSkySDataUnit}}} with a name that already exist, it will point to the one that already exist.
+The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} objects as you want. Each object of this type represents a container and contain information about the protocol used to replicate the data, the metadata information, etc. To create a {{{DepSkySDataUnit}}} object just need to pass the container name you want, as you can see in the contructor below. If you create a {{{DepSkySDataUnit}}} with a name that already exist, it will point to the one that already exist.
 
 {{{
   public DepSkySDataUnit(String regId) {
