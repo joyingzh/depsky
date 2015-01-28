@@ -69,67 +69,67 @@ This main is not enough to take advantage of all the functionalities provided by
 To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object. As you can see below, the constructor receive the client id (for now use ids below 6 because we only have keys generated for ids until 6) and a boolean. If the boolean value is set to false, will be used the *local storage*, otherwise will be used the *cloud storage*.
 
 {{{
-	public LocalDepSkySClient(int clientId, boolean useModel) throws StorageCloudException {
+  public LocalDepSkySClient(int clientId, boolean useModel) throws StorageCloudException {
 
-		this.clientId = clientId;
-		DepSkySKeyLoader keyLoader = new DepSkySKeyLoader(null);
-		if(!useModel){
-			this.cloud1 = new LocalDiskDriver("cloud1");
-			this.cloud2 = new LocalDiskDriver("cloud2");
-			this.cloud3 = new LocalDiskDriver("cloud3");
-			this.cloud4 = new LocalDiskDriver("cloud4");
-			this.drivers = new IDepSkySDriver[]{cloud1, cloud2, cloud3, cloud4};
-		}else{	
-			List<String[][]> credentials = null;
-			try {
-				credentials = readCredentials();
-			} catch (FileNotFoundException e) {
-				System.out.println("accounts.properties file dosen't exist!");
-				e.printStackTrace();
-			} catch (ParseException e) {
-				System.out.println("accounts.properties misconfigured!");		
-				e.printStackTrace();
-			}
-			this.drivers = new IDepSkySDriver[4];
-			String type = null, driverId = null, accessKey = null, secretKey = null;
-			for(int i = 0 ; i < credentials.size(); i++){
-				for(String[] pair : credentials.get(i)){
-					if(pair[0].equalsIgnoreCase("driver.type")){
-						type = pair[1];
-					}else if(pair[0].equalsIgnoreCase("driver.id")){
-						driverId = pair[1];
-					}else if(pair[0].equalsIgnoreCase("accessKey")){
-						accessKey = pair[1];
-					}else if(pair[0].equalsIgnoreCase("secretKey")){
-						secretKey = pair[1];
-					}
-				}
-				drivers[i] = DriversFactory.getDriver(type, driverId, accessKey, secretKey);
-			}
-		}	
-		this.manager = new DepSkySManager(drivers, this, keyLoader);
-		this.replies = new HashMap<Integer, CloudRepliesControlSet>();
-		this.N = drivers.length;
-		this.F = 1;
-		this.encoder = new ReedSolEncoder(2, 2, 8);
-		this.decoder = new ReedSolDecoder(2, 2, 8);
-
-		if(!startDrivers()){
-			System.out.println("Connection Error!");
+  	this.clientId = clientId;
+  	DepSkySKeyLoader keyLoader = new DepSkySKeyLoader(null);
+  	if(!useModel){
+  		this.cloud1 = new LocalDiskDriver("cloud1");
+		this.cloud2 = new LocalDiskDriver("cloud2");
+		this.cloud3 = new LocalDiskDriver("cloud3");
+		this.cloud4 = new LocalDiskDriver("cloud4");
+		this.drivers = new IDepSkySDriver[]{cloud1, cloud2, cloud3, cloud4};
+	}else{	
+		List<String[][]> credentials = null;
+		try {
+			credentials = readCredentials();
+		} catch (FileNotFoundException e) {	
+			System.out.println("accounts.properties file dosen't exist!");
+			e.printStackTrace();
+		} catch (ParseException e) {
+			System.out.println("accounts.properties misconfigured!");		
+			e.printStackTrace();
 		}
+		this.drivers = new IDepSkySDriver[4];
+		String type = null, driverId = null, accessKey = null, secretKey = null;
+		for(int i = 0 ; i < credentials.size(); i++){
+			for(String[] pair : credentials.get(i)){
+				if(pair[0].equalsIgnoreCase("driver.type")){
+					type = pair[1];
+				}else if(pair[0].equalsIgnoreCase("driver.id")){
+					driverId = pair[1];
+				}else if(pair[0].equalsIgnoreCase("accessKey")){
+					accessKey = pair[1];
+				}else if(pair[0].equalsIgnoreCase("secretKey")){
+					secretKey = pair[1];
+				}
+			}
+			drivers[i] = DriversFactory.getDriver(type, driverId, accessKey, secretKey);
+		}
+	}	
+	this.manager = new DepSkySManager(drivers, this, keyLoader);
+	this.replies = new HashMap<Integer, CloudRepliesControlSet>();
+	this.N = drivers.length;
+	this.F = 1;
+	this.encoder = new ReedSolEncoder(2, 2, 8);
+	this.decoder = new ReedSolDecoder(2, 2, 8);
+
+	if(!startDrivers()){
+		System.out.println("Connection Error!");
 	}
+  }
 }}}
 
 The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} objects as you want. Each object of this type represents a container. By container we mean a object that have associated one metadata file and all the versions written to it. It contains information about the protocol used to replicate the data, the metadata information, etc. To create a {{{DepSkySDataUnit}}} object just need to pass the container name you want, as you can see in the contructor below. If you create a {{{DepSkySDataUnit}}} with a name that already exist, it will point to the one that already exist.
 
 {{{
-  public DepSkySDataUnit(String regId) {
-...
+ public DepSkySDataUnit(String regId) {
+  ...
 }}}
 
 {{{
   public DepSkySDataUnit(String regId, String bucketName) {
-...
+  ...
 }}}
 
 After creating a {{{DepSkySDataUnit}}}object, you need to specify what protocol will be used to replicate the data that will be written in this container. By default, each {{{DepSkySDataUnit}} object will use !DepSky-A (data is replicated in clear_text). To use one of the others three protocols follow the code below.
@@ -148,8 +148,8 @@ When you want to do some operation in the {{{LocalDepSkySClient}}} object (read,
 When you want to use the write operation, you have to pass the DepSkySDataUnit object for which you want to write and the data to be written. As we can see below, this operation return a {{{byte[]}}}. This {{{byte[]}}} is a SHA-1 hash of the written data. This hash must be saved by the client if he want to use the read matching operation (see bellow).
 
 {{{
-public synchronized byte[] write(DepSkySDataUnit reg, byte[] value) throws Exception {
-...
+  public synchronized byte[] write(DepSkySDataUnit reg, byte[] value) throws Exception {
+  ...
 }}}
 
 
@@ -158,8 +158,8 @@ public synchronized byte[] write(DepSkySDataUnit reg, byte[] value) throws Excep
 To use this operation, you only have as argument the {{{DepSkySDataUnit}}} object. This operation will read the last version written to this {{{DepSkySDataUnit}}}.
 
 {{{
-public synchronized byte[] read(DepSkySDataUnit reg) throws Exception {
-...
+  public synchronized byte[] read(DepSkySDataUnit reg) throws Exception {
+  ...
 }}}
 
 ==*Read Matching*==
@@ -167,8 +167,8 @@ public synchronized byte[] read(DepSkySDataUnit reg) throws Exception {
 This operation have the function of read a old version of a given {{{DepSkySDataUnit}}}. To do that you have to pass a {{{byte[]}}} containing the hash of the version you want to read. This hash is the one returned by the write operation.
 
 {{{
-public synchronized byte[] readMatching(DepSkySDataUnit reg, byte[] hashMatching) throws Exception{
-...
+  public synchronized byte[] readMatching(DepSkySDataUnit reg, byte[] hashMatching) throws Exception{
+  ...
 }}}
 
 ==*Delete*==
@@ -176,6 +176,6 @@ public synchronized byte[] readMatching(DepSkySDataUnit reg, byte[] hashMatching
 The delete operation will delete all the files associated with the given {{{DepSkySDataUnit}}}, that includes all the versions written and the metadata file.
 
 {{{
-public synchronized void deleteContainer(DepSkySDataUnit reg) throws Exception{
+  public synchronized void deleteContainer(DepSkySDataUnit reg) throws Exception{
 ...
 }}}
