@@ -130,10 +130,8 @@ The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} object
   ...
 }}
 
-Each {{{DepSkySDataUnit}}} object contains information about the protocol used to replicate the data, the metadata information, the written versions, etc. There are two ways to create a {{{DepSkySDataUnit}}} object:
-
-
-ust need to pass the container name you want, as you can see in the contructor below. If you create a {{{DepSkySDataUnit}}} with a name that already exist, it will point to the one that already exist.
+Each {{{DepSkySDataUnit}}} object contains information about the protocol used to replicate the data, the metadata information, the written versions, etc. Furthermore, each one of these objects can be stored in a different bucket. There are two ways to create a {{{DepSkySDataUnit}}} object.
+The first example below (1) will write to a container named regId (which will contain regIdmetadata and regIdvalue files) inside a default bucket of DepSky. Using the second example a user is able to specify the bucket where the data will be stored.
 
 {{{
   (1)
