@@ -193,7 +193,7 @@ The delete operation will delete all the files associated with the given {{{DepS
 
 ==*SetAcl*==
 
-The setacl operation will change the permissions of a specified {{{DepSkySDataUnit}}}. Specifically, it will change the permissions of the bucket where the objects are stored, as well as the permissions of the objects within it. For do that we have to share the bucket in the four clouds used (once the data is replicated among them). The protocols to share a bucket in the used clouds can be found [http://www.navigators.di.fc.ul.pt/w2/img_auth.php/d/de/Oliveira2014DIHC.pdf here].
+The setacl operation will change the permissions of a specified {{{DepSkySDataUnit}}}. Specifically, it will change the permissions of the bucket where the objects are stored, as well as the permissions of the objects within it. For do that we have to share the bucket in the four used clouds (once the data is replicated among them). The protocols to share a bucket in the used clouds can be found [http://www.navigators.di.fc.ul.pt/w2/img_auth.php/d/de/Oliveira2014DIHC.pdf here].
 
 {{{
   public synchronized LinkedList<Pair<String, String[]>> setAcl(DepSkySDataUnit reg, String permission,                                      
@@ -210,3 +210,4 @@ The operation receives 3 arguments. The first corresponds to the {{{DepSkySDataU
  -> <"WINDOWS-AZURE", []>
 }}}
 
+For Amazon S3, the grantee user can find the canonicalId in the same page of the access credential (see the beginning of this page). For the other clouds, the information is quite intuitive. For Google Storage is only need the email of the grantee. For RackSpace the name and the grantee. Finally, for Windows Azure nothing is needed (see this [http://www.navigators.di.fc.ul.pt/w2/img_auth.php/d/de/Oliveira2014DIHC.pdf paper]).
