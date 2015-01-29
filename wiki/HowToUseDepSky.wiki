@@ -120,17 +120,17 @@ To start, you need to create a {{{src.depskys.core.LocalDepSkySClient}}} object.
   }
 }}}
 
-The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} objects as you want. Each object of this type represents our storage model. Precisely, a {{{src.depskys.core.DepSkySDataUnit}}} refers to an object that have associated one metadata file and all the versions written to it. The example bellow illustrate it. 
+The second step is create too many {{{src.depskys.core.DepSkySDataUnit}}} objects as you want. Each object of this type represents our storage model. Concretely, a {{{src.depskys.core.DepSkySDataUnit}}} refers to an object that have associated one metadata file and all the versions written to it. The example bellow illustrate it. 
 
-{{
+{{{
   exampleFilemetadata
   exampleFilevalue1004
   exampleFilevalue2004
   exampleFilevalue3004
   ...
-}}
+}}}
 
-Each {{{DepSkySDataUnit}}} object contains information about the protocol used to replicate the data, the metadata information, the written versions, etc. Furthermore, each one of these objects can be stored in a different bucket. There are two ways to create a {{{DepSkySDataUnit}}} object.
+Each {{{DepSkySDataUnit}}} object contains information about the protocol used to replicate the data, the metadata information, the written versions, etc. Furthermore, each one of these objects (by that we mean all the files associated with it) can be stored in a different bucket. There are two ways to create a {{{DepSkySDataUnit}}} object.
 The first example below (1) will write to a container named regId (which will contain regIdmetadata and regIdvalue files) inside a default bucket of DepSky. Using the second example a user is able to specify the bucket where the data will be stored.
 
 {{{
@@ -152,7 +152,7 @@ After creating a {{{DepSkySDataUnit}}}object, you need to specify what protocol 
   dataUnit.setUsingSecSharing(true); //to use only secret sharing
 }}}
 
-When you want to do some operation in the {{{LocalDepSkySClient}}} object (read, write, etc) you have to use a {{{DepSkySDataUnit}}} object.
+When you want to perform operations in the {{{LocalDepSkySClient}}} object (read, write, etc) you have to use a {{{DepSkySDataUnit}}} object.
 
 ==*Write*==
 
@@ -188,5 +188,22 @@ The delete operation will delete all the files associated with the given {{{DepS
 
 {{{
   public synchronized void deleteContainer(DepSkySDataUnit reg) throws Exception{
-...
+  ...
 }}}
+
+==*SetAcl*==
+
+The setacl operation will change the permissions of a specified {{{DepSkySDataUnit}}}. Specifically, it will change the permissions of the bucket where the objects are stored, as well as the permissions of the objects within it. For do that we have to share the bucket in the four clouds used (once the data is replicated among them). The protocols to share a bucket in the used clouds can be found [http://www.navigators.di.fc.ul.pt/w2/img_auth.php/d/de/Oliveira2014DIHC.pdf here].
+
+The operation receives 3 arguments. The first corresponds to the {{{DepSkySDataUnit}}} that will be shared. The second specifies the permission that other users will have to access the specified {{{DepSkySDataUnit}}}. It can be "r" for read, "w" for write, and "rw" for read and write. The last field has information about the user who will have access to the shared resource.
+
+
+
+
+
+{{{
+  public synchronized LinkedList<Pair<String, String[]>> setAcl(DepSkySDataUnit reg, String permission,                                      
+     LinkedList<Pair<String, String[]>> cannonicalIds) throws Exception {
+  ...
+}}}
+
