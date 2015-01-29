@@ -195,15 +195,18 @@ The delete operation will delete all the files associated with the given {{{DepS
 
 The setacl operation will change the permissions of a specified {{{DepSkySDataUnit}}}. Specifically, it will change the permissions of the bucket where the objects are stored, as well as the permissions of the objects within it. For do that we have to share the bucket in the four clouds used (once the data is replicated among them). The protocols to share a bucket in the used clouds can be found [http://www.navigators.di.fc.ul.pt/w2/img_auth.php/d/de/Oliveira2014DIHC.pdf here].
 
-The operation receives 3 arguments. The first corresponds to the {{{DepSkySDataUnit}}} that will be shared. The second specifies the permission that other users will have to access the specified {{{DepSkySDataUnit}}}. It can be "r" for read, "w" for write, and "rw" for read and write. The last field has information about the user who will have access to the shared resource.
-
-
-
-
-
 {{{
   public synchronized LinkedList<Pair<String, String[]>> setAcl(DepSkySDataUnit reg, String permission,                                      
      LinkedList<Pair<String, String[]>> cannonicalIds) throws Exception {
   ...
+}}}
+
+The operation receives 3 arguments. The first corresponds to the {{{DepSkySDataUnit}}} that will be shared. The second specifies the permission that other users will have to access the specified {{{DepSkySDataUnit}}}. It can be "r" for read, "w" for write, and "rw" for read and write. The last field has information about the user who will have access to the shared resource. This last field must be constructed following the example below where each line represent an entry in the LinkedList (which is a Pair<String, String[]>).
+
+{{{
+ -> <"AMAZON-S3", [canonicalId]>
+ -> <"GOOGLE-STORAGE", [email]>
+ -> <"RACKSPACE", [name, email]>
+ -> <"WINDOWS-AZURE", []>
 }}}
 
