@@ -210,4 +210,8 @@ The operation receives 3 arguments. The first corresponds to the {{{DepSkySDataU
  -> <"WINDOWS-AZURE", []>
 }}}
 
-For Amazon S3, the grantee user can find the canonicalId in the same page of the access credential (see the beginning of this page). For the other clouds, the information is quite intuitive. For Google Storage is only need the email of the grantee. For RackSpace the name and the grantee. Finally, for Windows Azure nothing is needed (see this [http://www.navigators.di.fc.ul.pt/w2/img_auth.php/d/de/Oliveira2014DIHC.pdf paper]).
+For Amazon S3, the grantee user can find the canonicalId in the same page of the access credential (see the beginning of this page). For the other clouds, the information is quite intuitive. For Google Storage is only need the email of the grantee (must be a gmail account). For RackSpace the name and the grantee. Finally, for Windows Azure nothing is needed (see this [http://www.navigators.di.fc.ul.pt/w2/img_auth.php/d/de/Oliveira2014DIHC.pdf paper]).
+
+This operation returns a {{{LinkedList<Pair<String, String[]>>}}} with the same organization of the one given as argument. This list must be given to the grantee user, as well as the name of the {{{DepSkySDataUnit}}} in order he can access the shared resource. But first the user who is sharing must add to it some information. More specifically, he must add to the AMAZON-S3 pair his own cannonicalID, and to the GOOGLE-STORAGE pair his email. 
+
+Once the grantee user have this list with he, he can use it in the other operations (read, write, delete) to operate on the shared bucket.
