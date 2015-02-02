@@ -201,7 +201,7 @@ The setacl operation will change the permissions of a specified {{{DepSkySDataUn
   ...
 }}}
 
-The operation receives 3 arguments. The first corresponds to the {{{DepSkySDataUnit}}} that will be shared. The second specifies the permission that other users will have to access the specified {{{DepSkySDataUnit}}}. It can be "r" for read, "w" for write, and "rw" for read and write. The last field has information about the user who will have access to the shared resource. This last field must be constructed following the example below where each line represent an entry in the LinkedList (which is a Pair<String, String[]>).
+The operation receives 3 arguments. The first corresponds to the {{{DepSkySDataUnit}}} that will be shared. The second specifies the permission that other users will have to access the specified {{{DepSkySDataUnit}}}. It can be "r" for read, "w" for write, and "rw" for read and write. The last field has information about the user who will have access to the shared resource. This last field must be constructed following the example below where each line represent an entry in the !LinkedList (which is a Pair<String, String[]>).
 
 {{{
  -> <"AMAZON-S3", [canonicalId]>
