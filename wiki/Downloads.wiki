@@ -1,8 +1,8 @@
 ==New Downloads==
 
-* DepSkyS-v.05.zip - [https://drive.google.com/file/d/0B7FR3MdGn7MSNzhFSy1pNXpxcE0/view?usp=sharing Download]
+ * DepSkyS-v.05.zip - [https://drive.google.com/file/d/0B7FR3MdGn7MSNzhFSy1pNXpxcE0/view?usp=sharing Download]
 
-* SCFS-v0.1.zip - [https://docs.google.com/uc?export=download&id=0B_z1sC5ZlG1xUzU2T2FQSUg5X3c Download]
+ * SCFS-v0.1.zip - [https://docs.google.com/uc?export=download&id=0B_z1sC5ZlG1xUzU2T2FQSUg5X3c Download]
 
 DepSky and SCFS dependencies:
 
